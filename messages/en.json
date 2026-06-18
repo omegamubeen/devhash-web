@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "home": {
+      "title": "DevHash – Web development, software & IT care in Vienna",
+      "description": "DevHash plans, builds and maintains websites, custom software and IT for companies in Vienna and the DACH region – from the first idea to day-to-day operation."
+    },
+    "services": {
+      "title": "Services – web development, software, automation & IT",
+      "description": "Web development, custom software, workflow automation, IT support and maintenance from Vienna. Find the right service for your project."
+    },
+    "pricing": {
+      "title": "Pricing & engagement",
+      "description": "How we work together: fixed-scope project, ongoing care or dedicated development. Transparent models instead of bait pricing – a quote after we understand the scope."
+    },
+    "about": {
+      "title": "About DevHash – software & IT studio in Vienna",
+      "description": "DevHash is a technical software and IT studio in Vienna. We combine careful engineering with clear advice and long-term support."
+    },
+    "contact": {
+      "title": "Contact – start a project",
+      "description": "Let’s talk about your project. Describe briefly what it’s about – we’ll reply with the next steps."
+    },
+    "legalNotice": {
+      "title": "Legal notice",
+      "description": "Legal notice and disclosure in accordance with applicable Austrian regulations."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "Information about the processing of personal data on this website in accordance with the GDPR."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "startProject": "Start a project",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy"
+  },
+  "common": {
+    "allServices": "All services",
+    "learnMore": "Learn more",
+    "readService": "View service",
+    "getInTouch": "Get in touch",
+    "startProject": "Start a project",
+    "discussScope": "Discuss scope",
+    "backToServices": "Back to services",
+    "whoFor": "Who it’s for",
+    "included": "What’s included",
+    "howWeWork": "How we work",
+    "results": "What you get",
+    "faq": "Frequent questions",
+    "relatedServices": "Related services",
+    "theChallenge": "Common challenges",
+    "nextStep": "Next step",
+    "skipToContent": "Skip to content"
+  },
+  "a11y": {
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToEnglish": "Switch to English",
+    "switchToGerman": "Auf Deutsch wechseln",
+    "languageLabel": "Language",
+    "breadcrumb": "Breadcrumb",
+    "homeLink": "DevHash – home",
+    "currentPage": "Current page"
+  },
+  "header": {
+    "tagline": "Software & IT studio, Vienna"
+  },
+  "footer": {
+    "servicesHeading": "Services",
+    "companyHeading": "Company",
+    "legalHeading": "Legal",
+    "contactHeading": "Contact",
+    "blurb": "Websites, custom software and dependable IT care from Vienna – for companies across the DACH region.",
+    "rights": "All rights reserved.",
+    "placeholderNotice": "Preview – business and legal details are placeholders until approved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Software & IT studio in Vienna",
+      "headline": "Digital products that stay reliable in everyday use.",
+      "subhead": "We plan, build and maintain websites, custom software and automation for companies in Vienna and the DACH region – with clean code and clear communication.",
+      "primaryCta": "Start a project",
+      "secondaryCta": "View services",
+      "note": "First conversation with no obligation. A quote only after the scope is clear."
+    },
+    "capabilities": {
+      "web": "Web development",
+      "software": "Custom software",
+      "automation": "Automation",
+      "support": "IT care"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "heading": "From the first sketch to day-to-day operation",
+      "intro": "Five services that work together – use them on their own, or as continuous support from idea to maintenance.",
+      "cta": "View all services"
+    },
+    "principles": {
+      "eyebrow": "How we work",
+      "heading": "Technology that won’t let you down",
+      "intro": "We make decisions that still hold up in two years – not just until the next launch.",
+      "items": {
+        "clarity": {
+          "title": "Clear advice",
+          "body": "We explain options and consequences in plain language so you can decide with confidence – no jargon used as a smokescreen."
+        },
+        "maintainable": {
+          "title": "Maintainable code",
+          "body": "We build so later changes stay easy. You receive source code and documentation and stay independent."
+        },
+        "reliable": {
+          "title": "Dependable care",
+          "body": "Launch isn’t the end: updates, monitoring and a named contact keep everything stable."
+        },
+        "honest": {
+          "title": "Honest assessment",
+          "body": "We name risks and effort early, and we’ll say when something isn’t needed. Realistic beats wishful."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Process",
+      "heading": "A clear path, not a black box",
+      "intro": "Every engagement follows the same transparent pattern – so you always know where it stands.",
+      "steps": {
+        "understand": {
+          "title": "Understand",
+          "body": "Clarify goals, context and scope. The result is a shared picture and a concrete frame."
+        },
+        "shape": {
+          "title": "Shape",
+          "body": "Structure, interface and technical approach take shape as a reviewable foundation."
+        },
+        "build": {
+          "title": "Build",
+          "body": "Development in transparent steps, regularly visible and testable."
+        },
+        "operate": {
+          "title": "Operate",
+          "body": "Launch, handover and – if you want – ongoing maintenance and improvement."
+        }
+      }
+    },
+    "engagement": {
+      "eyebrow": "Engagement",
+      "heading": "Models that fit your project",
+      "intro": "A one-off project, ongoing care or continuous development – we choose the frame together.",
+      "cta": "Engagement & pricing"
+    },
+    "cta": {
+      "heading": "Let’s talk about your project.",
+      "body": "Describe briefly what it’s about. You’ll get an honest first assessment and the next steps – with no obligation.",
+      "primary": "Start a project",
+      "secondary": "View services"
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "Services for web, software and IT",
+    "intro": "Five services that fit together. Pick an area to see the approach, scope and typical outcomes.",
+    "ctaHeading": "Not sure what you need?",
+    "ctaBody": "Describe your project – we’ll place it and suggest a suitable path.",
+    "viewService": "View"
+  },
+  "pricing": {
+    "eyebrow": "Pricing & engagement",
+    "heading": "Fair, transparent collaboration",
+    "intro": "We work with clear models instead of bait pricing. We define the exact frame only once we understand your project – which avoids fantasy figures in either direction.",
+    "consultationLabel": "Individual quote",
+    "consultationHint": "Price after the scope is clear",
+    "fromLabel": "from",
+    "bestForLabel": "Best for",
+    "includesLabel": "Included",
+    "modelLabel": "How the engagement works",
+    "factorsLabel": "What affects the price",
+    "noHiddenHeading": "What you won’t find here",
+    "noHidden": "No fake discounts, no artificial urgency, no struck-through prices. Instead, an honest conversation about scope, effort and value.",
+    "faqHeading": "Questions about working together",
+    "faq": {
+      "q1": "Why aren’t prices shown on the website?",
+      "a1": "Because honest prices depend on scope. A blanket number would be either too high or too low. After a short conversation you get a concrete quote.",
+      "q2": "How can I estimate the cost roughly?",
+      "a2": "Each model card lists the factors that drive the price. The clearer your project, the more precisely we can place it.",
+      "q3": "Are there ongoing costs?",
+      "a3": "Only if you want ongoing care. We agree scope and cost in writing beforehand, so there are no surprises."
+    }
+  },
+  "about": {
+    "eyebrow": "About us",
+    "heading": "A software and IT studio that thinks long term",
+    "intro": "DevHash combines development, advice and care. We don’t just build what’s wanted today, but what still holds up tomorrow.",
+    "storyHeading": "What we’re about",
+    "story1": "Many technical projects fail not on the technology, but on unclear expectations, missing upkeep and solutions no one understands anymore. That’s exactly where we focus.",
+    "story2": "We work in transparent steps, document what we do, and stay reachable once a project is live. The result is technology that holds up in everyday use – not just in the demo.",
+    "valuesHeading": "What matters to us",
+    "values": {
+      "ownership": {
+        "title": "Ownership",
+        "body": "We take responsibility for the outcome, not just for individual tasks."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "body": "We communicate effort, risks and decisions openly and early."
+      },
+      "craft": {
+        "title": "Craft",
+        "body": "Clean, tested code is our standard, not an upgrade."
+      },
+      "continuity": {
+        "title": "Continuity",
+        "body": "We think beyond the launch and stay dependably reachable."
+      }
+    },
+    "approachHeading": "How we go about it",
+    "ctaHeading": "Sounds like a good fit?",
+    "ctaBody": "Tell us about your project – we’ll reply with an honest assessment."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Let’s talk about your project",
+    "intro": "Describe briefly what it’s about. The more context, the more concrete the answer. You’ll get an honest first assessment and the next steps.",
+    "directHeading": "Reach us directly",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "responseLabel": "Response time",
+    "formHeading": "Send an enquiry",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "First and last name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Optional",
+      "topic": "What’s it about?",
+      "topicOptions": {
+        "web": "Website / web development",
+        "software": "Custom software",
+        "automation": "Automation / integration",
+        "support": "IT support / care",
+        "maintenance": "Maintenance & care",
+        "other": "Something else"
+      },
+      "message": "Your message",
+      "messagePlaceholder": "What is it about, what goal are you pursuing, and is there a timeframe?",
+      "consent": "I agree that my details may be processed to handle this enquiry. Details in the privacy policy.",
+      "submit": "Send enquiry",
+      "submitting": "Sending …",
+      "required": "Required"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please describe your enquiry briefly.",
+      "messageTooShort": "Please write a little more (at least 10 characters).",
+      "topicRequired": "Please choose a topic.",
+      "consentRequired": "Please agree to the processing so we can reply."
+    },
+    "success": {
+      "heading": "Thanks for your enquiry!",
+      "body": "Your message has arrived. We usually reply within one business day.",
+      "again": "Send another enquiry"
+    },
+    "error": {
+      "heading": "That didn’t work",
+      "body": "Something went wrong while sending. Please try again or email us directly.",
+      "retry": "Try again"
+    },
+    "devNotice": "Note: In preview mode the enquiry is logged but not sent until an email provider is configured."
+  },
+  "legal": {
+    "draftNotice": "Template – these legal details must be reviewed by a qualified person and completed with real data before publication.",
+    "pendingField": "To be confirmed",
+    "legalNotice": {
+      "heading": "Legal notice",
+      "intro": "Information pursuant to §5 ECG, §14 UGB and §25 MedienG.",
+      "companyHeading": "Company",
+      "contactHeading": "Contact",
+      "registrationHeading": "Registration & supervision",
+      "vatHeading": "VAT",
+      "disputeHeading": "Online dispute resolution",
+      "disputeText": "The European Commission provides a platform for online dispute resolution (ODR):",
+      "disputeNote": "We are neither obliged nor generally willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+      "liabilityHeading": "Liability for content",
+      "liabilityText": "The contents of this website were created with care. However, we cannot guarantee the accuracy, completeness or timeliness of the content.",
+      "copyrightHeading": "Copyright",
+      "copyrightText": "The content published on this website is subject to Austrian copyright law. Any use beyond the limits of the law requires prior consent."
+    },
+    "privacy": {
+      "heading": "Privacy policy",
+      "intro": "This statement explains the processing of personal data on this website in accordance with the General Data Protection Regulation (GDPR).",
+      "controllerHeading": "Controller",
+      "dataHeading": "What data we process",
+      "dataText": "This website is designed to minimise data. When it is accessed, technically necessary server log data is processed. If you use the contact form, we process the data you provide solely to handle your enquiry.",
+      "contactFormHeading": "Contact form",
+      "contactFormText": "We use the data entered in the contact form (name, email address, optional details and your message) solely to answer your enquiry. It is not passed on to third parties unless this is necessary to handle the request.",
+      "cookiesHeading": "Cookies & tracking",
+      "cookiesText": "This website sets no marketing or tracking cookies and embeds no external analytics services, unless this is explicitly enabled and disclosed here.",
+      "rightsHeading": "Your rights",
+      "rightsText": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. You may also lodge a complaint with the Austrian Data Protection Authority.",
+      "rightsAuthority": "Austrian Data Protection Authority: dsb.gv.at"
+    }
+  },
+  "preflight": {
+    "heading": "Pre-launch status",
+    "intro": "This overview is visible in development only. It lists every placeholder that must be replaced with real, approved details before going live.",
+    "allConfirmed": "All recorded details are confirmed.",
+    "count": "open placeholders",
+    "idLabel": "Identifier",
+    "noteLabel": "To do",
+    "valueLabel": "Current placeholder"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "heading": "This page doesn’t exist.",
+    "body": "The link may be out of date or contain a typo.",
+    "cta": "Go to homepage"
+  },
+  "error": {
+    "heading": "Something went wrong",
+    "body": "An unexpected error occurred. Please reload the page.",
+    "retry": "Try again"
+  }
+}

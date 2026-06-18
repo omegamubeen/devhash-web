@@ -1,0 +1,550 @@
+@import 'tailwindcss';
+
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * DevHash design tokens — "Engineered calm"
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Warm paper canvas · deep ink surfaces for drama · one precise emerald signal ·
+ * monospaced technical labels · fine grid motifs · generous, disciplined space.
+ * Tokens below are the single source of truth and generate Tailwind utilities.
+ */
+@theme {
+  /* ── Brand palette ─────────────────────────────────────────────────────── */
+  --color-paper: #fbfaf8; /* page background (warm off-white) */
+  --color-sand-50: #f6f4ef;
+  --color-sand-100: #efece4;
+  --color-sand-200: #e6e2d8; /* hairline borders */
+  --color-sand-300: #d6d1c4; /* strong borders */
+
+  --color-ink: #0b0e15; /* dramatic dark surface */
+  --color-ink-800: #141926;
+  --color-ink-700: #1f2533;
+  --color-ink-600: #2c3242;
+
+  --color-carbon: #13161d; /* primary body text on paper */
+  --color-slate-600: #545b6b; /* muted text on paper (AA on paper) */
+  --color-slate-400: #8a90a0; /* subtle text / placeholders */
+
+  --color-accent: #0c7a4e; /* signal — UI + large text on paper */
+  --color-accent-strong: #0a6440; /* AA for body text/links on paper */
+  --color-accent-bright: #36d99b; /* on ink surfaces / focus glow */
+  --color-accent-soft: #e4f3ec; /* tint backgrounds on paper */
+  --color-accent-ink: #0e1f18; /* deep green-black for tinted dark */
+
+  --color-azure: #2f6bff; /* sparingly, technical visuals only */
+
+  --color-success: #0c7a4e;
+  --color-danger: #c0362c;
+  --color-danger-soft: #fbeae8;
+  --color-warning: #9a6411;
+
+  /* paper-context semantic aliases (overridden inside .surface-ink) */
+  --color-bg: var(--color-paper);
+  --color-fg: var(--color-carbon);
+  --color-muted: var(--color-slate-600);
+  --color-card: #ffffff;
+  --color-border: var(--color-sand-200);
+  --color-border-strong: var(--color-sand-300);
+
+  /* ── Fluid type scale (360px → ~1240px) ───────────────────────────────── */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.845rem + 0.16vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.965rem + 0.18vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --text-xl: clamp(1.3rem, 1.19rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.55rem, 1.36rem + 0.85vw, 2rem);
+  --text-3xl: clamp(1.95rem, 1.64rem + 1.4vw, 2.75rem);
+  --text-4xl: clamp(2.35rem, 1.9rem + 2vw, 3.5rem);
+  --text-5xl: clamp(2.8rem, 2.15rem + 2.9vw, 4.5rem);
+  --text-6xl: clamp(3.2rem, 2.3rem + 4vw, 5.25rem);
+
+  /* ── Type families ────────────────────────────────────────────────────── */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', SFMono-Regular, 'Cascadia Code', 'JetBrains Mono',
+    'Roboto Mono', Menlo, Consolas, monospace;
+
+  /* ── Radii ────────────────────────────────────────────────────────────── */
+  --radius-xs: 4px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-2xl: 30px;
+  --radius-3xl: 40px;
+
+  /* ── Soft, layered shadows ────────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(11, 14, 21, 0.06);
+  --shadow-sm:
+    0 1px 2px rgba(11, 14, 21, 0.05), 0 2px 6px -2px rgba(11, 14, 21, 0.06);
+  --shadow-md:
+    0 2px 6px -2px rgba(11, 14, 21, 0.07), 0 12px 28px -10px rgba(11, 14, 21, 0.13);
+  --shadow-lg:
+    0 4px 12px -4px rgba(11, 14, 21, 0.08), 0 28px 56px -20px rgba(11, 14, 21, 0.2);
+  --shadow-ink: 0 30px 60px -24px rgba(11, 14, 21, 0.55);
+
+  /* ── Layout ───────────────────────────────────────────────────────────── */
+  --container-max: 75rem; /* 1200px */
+  --container-wide: 82rem;
+
+  /* ── Easings & durations (motion system) ──────────────────────────────── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+}
+
+/* Motion + z-index tokens (kept as plain custom props). */
+:root {
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --dur-slow: 360ms;
+  --dur-slower: 600ms;
+
+  --z-header: 50;
+  --z-overlay: 60;
+  --z-menu: 70;
+  --z-skip: 100;
+
+  --header-h: 4.5rem;
+
+  color-scheme: light;
+}
+
+/* ── Base layer ───────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    font-feature-settings: 'cv05', 'ss01';
+    overflow-x: hidden;
+    text-underline-offset: 0.18em;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-fg);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .surface-ink :focus-visible {
+    outline-color: var(--color-accent-bright);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  /* Honour reduced-motion globally and comprehensively. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ── Dark surface context ──────────────────────────────────────────────────
+ * Apply `.surface-ink` to flip semantic tokens for hero / CTA / footer bands.
+ */
+.surface-ink {
+  --color-bg: var(--color-ink);
+  --color-fg: #eef0f4;
+  --color-muted: #a6adbd;
+  --color-card: var(--color-ink-800);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+  background-color: var(--color-ink);
+  color: var(--color-fg);
+}
+
+/* ── Layout primitives ─────────────────────────────────────────────────────── */
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: clamp(1.15rem, 0.6rem + 2.4vw, 2.5rem);
+  }
+
+  .section {
+    padding-block: clamp(3.5rem, 2.4rem + 5vw, 7rem);
+  }
+  .section-sm {
+    padding-block: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  }
+
+  /* Monospaced technical eyebrow — a signature of the design language. */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-accent-strong);
+  }
+  .surface-ink .eyebrow {
+    color: var(--color-accent-bright);
+  }
+  .eyebrow::before {
+    content: '';
+    width: 1.6rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  /* Fine technical grid backdrop for dark surfaces. */
+  .grid-motif {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 78%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 78%);
+  }
+
+  /* ── Buttons ──────────────────────────────────────────────────────────── */
+  .btn {
+    --btn-bg: var(--color-carbon);
+    --btn-fg: #fff;
+    --btn-ring: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 550;
+    font-size: var(--text-sm);
+    line-height: 1;
+    padding: 0.8rem 1.25rem;
+    border-radius: var(--radius-md);
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    box-shadow: inset 0 0 0 1px var(--btn-ring);
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      background-color var(--dur) var(--ease-out),
+      box-shadow var(--dur) var(--ease-out),
+      color var(--dur) var(--ease-out);
+    will-change: transform;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    --btn-bg: var(--color-carbon);
+    --btn-fg: #fff;
+  }
+  .btn-primary:hover {
+    --btn-bg: #000;
+  }
+  .surface-ink .btn-primary {
+    --btn-bg: var(--color-accent-bright);
+    --btn-fg: var(--color-ink);
+  }
+  .surface-ink .btn-primary:hover {
+    --btn-bg: #4ee9ad;
+  }
+
+  .btn-accent {
+    --btn-bg: var(--color-accent);
+    --btn-fg: #fff;
+  }
+  .btn-accent:hover {
+    --btn-bg: var(--color-accent-strong);
+  }
+
+  .btn-secondary {
+    --btn-bg: transparent;
+    --btn-fg: var(--color-fg);
+    --btn-ring: var(--color-border-strong);
+  }
+  .btn-secondary:hover {
+    --btn-bg: var(--color-sand-50);
+  }
+  .surface-ink .btn-secondary {
+    --btn-fg: #eef0f4;
+    --btn-ring: rgba(255, 255, 255, 0.22);
+  }
+  .surface-ink .btn-secondary:hover {
+    --btn-bg: rgba(255, 255, 255, 0.06);
+  }
+
+  .btn-lg {
+    font-size: var(--text-base);
+    padding: 1rem 1.6rem;
+    border-radius: var(--radius-lg);
+  }
+  .btn-block {
+    width: 100%;
+  }
+
+  /* ── Surface / card ───────────────────────────────────────────────────── */
+  .card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xs);
+    transition:
+      transform var(--dur) var(--ease-out),
+      box-shadow var(--dur) var(--ease-out),
+      border-color var(--dur) var(--ease-out);
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-strong);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-full, 999px);
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    background: var(--color-bg);
+  }
+
+  /* Animated link underline (respects reduced-motion via duration override). */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size var(--dur) var(--ease-out);
+    padding-bottom: 1px;
+  }
+  .link-underline:hover {
+    background-size: 100% 1.5px;
+  }
+
+  /* Form controls. */
+  .dh-input {
+    width: 100%;
+    background: var(--color-card);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    padding: 0.7rem 0.9rem;
+    font-size: var(--text-base);
+    color: var(--color-fg);
+    transition:
+      border-color var(--dur) var(--ease-out),
+      box-shadow var(--dur) var(--ease-out);
+  }
+  .dh-input::placeholder {
+    color: var(--color-slate-400);
+  }
+  .dh-input:hover {
+    border-color: var(--color-slate-400);
+  }
+  .dh-input:focus-visible {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 18%, transparent);
+  }
+
+  /* Skip-to-content link — visible only when focused. */
+  .dh-skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: var(--z-skip);
+    transform: translateY(-150%);
+    background: var(--color-carbon);
+    color: #fff;
+    padding: 0.7rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 550;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--dur) var(--ease-out);
+  }
+  .dh-skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid var(--color-accent-bright);
+    outline-offset: 2px;
+  }
+
+  /* Dev-only marker for unconfirmed placeholder facts (never ships to prod). */
+  .dh-placeholder {
+    text-decoration: underline dashed var(--color-warning);
+    text-underline-offset: 0.22em;
+    background: color-mix(in oklab, var(--color-warning) 12%, transparent);
+    border-radius: 2px;
+    padding-inline: 0.1em;
+    cursor: help;
+  }
+
+  /* Prose defaults for legal/long-form text. */
+  .prose-legal {
+    max-width: 68ch;
+    color: var(--color-fg);
+  }
+  .prose-legal h2 {
+    font-size: var(--text-xl);
+    margin-top: 2.25rem;
+    margin-bottom: 0.6rem;
+  }
+  .prose-legal h3 {
+    font-size: var(--text-lg);
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .prose-legal p {
+    color: var(--color-muted);
+    margin-bottom: 0.9rem;
+  }
+  .prose-legal a {
+    color: var(--color-accent-strong);
+    text-decoration: underline;
+  }
+}
+
+/* ── Reusable keyframes (entrance, used by Reveal + section transitions) ─── */
+@keyframes dh-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes dh-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dh-pulse-soft {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+@keyframes dh-wire {
+  to {
+    stroke-dashoffset: -18;
+  }
+}
+@keyframes dh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero diagram animations (CSS so prefers-reduced-motion neutralises them). */
+.dh-wire {
+  animation: dh-wire 1.4s linear infinite;
+}
+.dh-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dh-spin 24s linear infinite;
+}
+
+/* ── Entrance utilities ─────────────────────────────────────────────────────
+ * `.animate-rise` plays once on load (used above the fold, no JS dependency).
+ * `.reveal` is armed only when the root has `.reveal-on` (added by a motion-aware
+ * inline script), so content is visible without JS and under reduced-motion.
+ */
+@utility animate-rise {
+  animation: dh-rise var(--dur-slow) var(--ease-out) both;
+}
+@utility animate-fade {
+  animation: dh-fade var(--dur-slow) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-on .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity var(--dur-slow) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out);
+  }
+  .reveal-on .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive auto-grid used by card collections. */
+@utility auto-grid {
+  display: grid;
+  gap: clamp(1rem, 0.6rem + 1.4vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+/* Hairline rule that fades at both ends — a recurring technical detail. */
+@utility rule-soft {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border-strong),
+    transparent
+  );
+}

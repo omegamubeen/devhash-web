@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "home": {
+      "title": "DevHash – Webentwicklung, Software & IT-Betreuung in Wien",
+      "description": "DevHash plant, entwickelt und betreut Websites, individuelle Software und IT für Unternehmen in Wien und der DACH-Region – von der Idee bis zum laufenden Betrieb."
+    },
+    "services": {
+      "title": "Leistungen – Webentwicklung, Software, Automatisierung & IT",
+      "description": "Webentwicklung, individuelle Softwareentwicklung, Workflow-Automatisierung, IT-Support und Wartung aus Wien. Finden Sie die passende Leistung für Ihr Vorhaben."
+    },
+    "pricing": {
+      "title": "Preise & Zusammenarbeit",
+      "description": "So arbeiten wir zusammen: Projekt zum Festrahmen, laufende Betreuung oder dedizierte Entwicklung. Transparente Modelle statt Lockpreise – Angebot nach Klärung des Umfangs."
+    },
+    "about": {
+      "title": "Über DevHash – Software- und IT-Studio aus Wien",
+      "description": "DevHash ist ein technisches Software- und IT-Studio aus Wien. Wir verbinden saubere Entwicklung mit klarer Beratung und langfristiger Betreuung."
+    },
+    "contact": {
+      "title": "Kontakt – Projekt anfragen",
+      "description": "Sprechen wir über Ihr Vorhaben. Beschreiben Sie kurz, worum es geht – wir melden uns mit den nächsten Schritten."
+    },
+    "legalNotice": {
+      "title": "Impressum",
+      "description": "Impressum und Offenlegung gemäß den geltenden österreichischen Vorschriften."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Informationen zur Verarbeitung personenbezogener Daten auf dieser Website gemäß DSGVO."
+    }
+  },
+  "nav": {
+    "services": "Leistungen",
+    "pricing": "Preise",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "startProject": "Projekt anfragen",
+    "legalNotice": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "common": {
+    "allServices": "Alle Leistungen",
+    "learnMore": "Mehr erfahren",
+    "readService": "Leistung ansehen",
+    "getInTouch": "Kontakt aufnehmen",
+    "startProject": "Projekt anfragen",
+    "discussScope": "Umfang besprechen",
+    "backToServices": "Zurück zu den Leistungen",
+    "whoFor": "Für wen geeignet",
+    "included": "Was enthalten ist",
+    "howWeWork": "So arbeiten wir",
+    "results": "Was Sie davon haben",
+    "faq": "Häufige Fragen",
+    "relatedServices": "Verwandte Leistungen",
+    "theChallenge": "Typische Herausforderungen",
+    "nextStep": "Nächster Schritt",
+    "skipToContent": "Zum Inhalt springen"
+  },
+  "a11y": {
+    "mainNav": "Hauptnavigation",
+    "footerNav": "Fußzeilen-Navigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "switchToEnglish": "Switch to English",
+    "switchToGerman": "Auf Deutsch wechseln",
+    "languageLabel": "Sprache",
+    "breadcrumb": "Brotkrumen-Navigation",
+    "homeLink": "DevHash – Startseite",
+    "currentPage": "Aktuelle Seite"
+  },
+  "header": {
+    "tagline": "Software & IT-Studio, Wien"
+  },
+  "footer": {
+    "servicesHeading": "Leistungen",
+    "companyHeading": "Unternehmen",
+    "legalHeading": "Rechtliches",
+    "contactHeading": "Kontakt",
+    "blurb": "Websites, individuelle Software und verlässliche IT-Betreuung aus Wien – für Unternehmen in der DACH-Region.",
+    "rights": "Alle Rechte vorbehalten.",
+    "placeholderNotice": "Vorschau – Geschäfts- und Rechtsangaben sind Platzhalter bis zur Freigabe."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Software & IT-Studio aus Wien",
+      "headline": "Digitale Produkte, die im Alltag verlässlich funktionieren.",
+      "subhead": "Wir planen, entwickeln und betreuen Websites, individuelle Software und Automatisierung für Unternehmen in Wien und der DACH-Region – mit sauberem Code und klarer Kommunikation.",
+      "primaryCta": "Projekt anfragen",
+      "secondaryCta": "Leistungen ansehen",
+      "note": "Erstgespräch ohne Verpflichtung. Angebot erst nach Klärung des Umfangs."
+    },
+    "capabilities": {
+      "web": "Webentwicklung",
+      "software": "Individuelle Software",
+      "automation": "Automatisierung",
+      "support": "IT-Betreuung"
+    },
+    "services": {
+      "eyebrow": "Leistungen",
+      "heading": "Vom ersten Entwurf bis zum laufenden Betrieb",
+      "intro": "Fünf aufeinander abgestimmte Leistungen – einzeln nutzbar oder als durchgehende Begleitung von der Idee bis zur Wartung.",
+      "cta": "Alle Leistungen ansehen"
+    },
+    "principles": {
+      "eyebrow": "Wie wir arbeiten",
+      "heading": "Technik, die Sie nicht im Stich lässt",
+      "intro": "Wir treffen Entscheidungen, die auch in zwei Jahren noch tragen – nicht nur bis zum nächsten Launch.",
+      "items": {
+        "clarity": {
+          "title": "Verständliche Beratung",
+          "body": "Wir erklären Optionen und Folgen in klarer Sprache, damit Sie fundiert entscheiden können – ohne Fachjargon als Nebelwand."
+        },
+        "maintainable": {
+          "title": "Wartbarer Code",
+          "body": "Wir bauen so, dass spätere Änderungen leicht fallen. Sie erhalten Quellcode und Dokumentation und bleiben unabhängig."
+        },
+        "reliable": {
+          "title": "Verlässliche Betreuung",
+          "body": "Nach dem Launch ist nicht Schluss: Updates, Monitoring und ein fester Ansprechpartner halten alles stabil."
+        },
+        "honest": {
+          "title": "Ehrliche Einschätzung",
+          "body": "Wir nennen Risiken und Aufwände früh und sagen auch, wenn etwas nicht nötig ist. Lieber realistisch als schöngerechnet."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Ablauf",
+      "heading": "Ein klarer Weg statt Black Box",
+      "intro": "Jedes Vorhaben folgt demselben nachvollziehbaren Muster – damit Sie jederzeit wissen, wo es steht.",
+      "steps": {
+        "understand": {
+          "title": "Verstehen",
+          "body": "Ziele, Kontext und Umfang klären. Ergebnis ist ein gemeinsames Bild und ein konkreter Rahmen."
+        },
+        "shape": {
+          "title": "Gestalten",
+          "body": "Struktur, Oberfläche und technischer Ansatz entstehen als überprüfbare Grundlage."
+        },
+        "build": {
+          "title": "Umsetzen",
+          "body": "Entwicklung in nachvollziehbaren Schritten, regelmäßig sicht- und testbar."
+        },
+        "operate": {
+          "title": "Betreiben",
+          "body": "Start, Übergabe und – auf Wunsch – laufende Wartung und Weiterentwicklung."
+        }
+      }
+    },
+    "engagement": {
+      "eyebrow": "Zusammenarbeit",
+      "heading": "Modelle, die zu Ihrem Vorhaben passen",
+      "intro": "Ob einmaliges Projekt, laufende Betreuung oder kontinuierliche Entwicklung – wir wählen den Rahmen gemeinsam.",
+      "cta": "Zusammenarbeit & Preise"
+    },
+    "cta": {
+      "heading": "Sprechen wir über Ihr Vorhaben.",
+      "body": "Beschreiben Sie kurz, worum es geht. Sie erhalten eine ehrliche Ersteinschätzung und die nächsten Schritte – ohne Verpflichtung.",
+      "primary": "Projekt anfragen",
+      "secondary": "Leistungen ansehen"
+    }
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "heading": "Leistungen für Web, Software und IT",
+    "intro": "Fünf Leistungen, die ineinandergreifen. Wählen Sie einen Bereich, um Vorgehen, Umfang und typische Ergebnisse zu sehen.",
+    "ctaHeading": "Nicht sicher, was Sie brauchen?",
+    "ctaBody": "Beschreiben Sie Ihr Vorhaben – wir ordnen es ein und schlagen einen passenden Weg vor.",
+    "viewService": "Ansehen"
+  },
+  "pricing": {
+    "eyebrow": "Preise & Zusammenarbeit",
+    "heading": "Faire, nachvollziehbare Zusammenarbeit",
+    "intro": "Wir arbeiten mit klaren Modellen statt Lockpreisen. Den genauen Rahmen legen wir erst fest, wenn wir Ihr Vorhaben verstanden haben – so vermeiden wir Luftnummern in beide Richtungen.",
+    "consultationLabel": "Individuelles Angebot",
+    "consultationHint": "Preis nach Klärung des Umfangs",
+    "fromLabel": "ab",
+    "bestForLabel": "Geeignet für",
+    "includesLabel": "Enthalten",
+    "modelLabel": "So läuft die Zusammenarbeit",
+    "factorsLabel": "Was den Preis beeinflusst",
+    "noHiddenHeading": "Was Sie bei uns nicht finden",
+    "noHidden": "Keine Schein-Rabatte, keine künstliche Dringlichkeit, keine durchgestrichenen Preise. Stattdessen ein ehrliches Gespräch über Umfang, Aufwand und Nutzen.",
+    "faqHeading": "Fragen zur Zusammenarbeit",
+    "faq": {
+      "q1": "Warum stehen keine Preise auf der Website?",
+      "a1": "Weil seriöse Preise vom Umfang abhängen. Eine pauschale Zahl wäre entweder zu hoch oder zu niedrig. Nach einem kurzen Gespräch erhalten Sie ein konkretes Angebot.",
+      "q2": "Wie kann ich die Kosten grob einschätzen?",
+      "a2": "Auf jeder Modell-Karte finden Sie die Faktoren, die den Preis bestimmen. Je klarer Ihr Vorhaben, desto genauer können wir es einordnen.",
+      "q3": "Gibt es laufende Kosten?",
+      "a3": "Nur, wenn Sie laufende Betreuung wünschen. Umfang und Kosten halten wir vorher schriftlich fest, sodass keine Überraschungen entstehen."
+    }
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "heading": "Ein Studio für Software und IT, das langfristig denkt",
+    "intro": "DevHash verbindet Entwicklung, Beratung und Betreuung. Wir bauen nicht nur, was heute gefragt ist, sondern was morgen noch trägt.",
+    "storyHeading": "Worum es uns geht",
+    "story1": "Viele technische Projekte scheitern nicht an der Technik, sondern an unklaren Erwartungen, fehlender Pflege und Lösungen, die niemand mehr versteht. Genau dort setzen wir an.",
+    "story2": "Wir arbeiten in nachvollziehbaren Schritten, dokumentieren, was wir tun, und bleiben ansprechbar, wenn ein Projekt live ist. So entsteht Technik, die im Alltag trägt – nicht nur in der Demo.",
+    "valuesHeading": "Was uns wichtig ist",
+    "values": {
+      "ownership": {
+        "title": "Verantwortung",
+        "body": "Wir übernehmen Verantwortung für das Ergebnis, nicht nur für einzelne Aufgaben."
+      },
+      "transparency": {
+        "title": "Transparenz",
+        "body": "Aufwände, Risiken und Entscheidungen kommunizieren wir offen und früh."
+      },
+      "craft": {
+        "title": "Handwerk",
+        "body": "Sauberer, getesteter Code ist für uns Standard, kein Aufpreis."
+      },
+      "continuity": {
+        "title": "Kontinuität",
+        "body": "Wir denken über den Launch hinaus und bleiben verlässlich erreichbar."
+      }
+    },
+    "approachHeading": "Wie wir vorgehen",
+    "ctaHeading": "Klingt nach einer passenden Zusammenarbeit?",
+    "ctaBody": "Erzählen Sie uns von Ihrem Vorhaben – wir melden uns mit einer ehrlichen Einschätzung."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Sprechen wir über Ihr Vorhaben",
+    "intro": "Beschreiben Sie kurz, worum es geht. Je mehr Kontext, desto konkreter die Antwort. Sie erhalten eine ehrliche Ersteinschätzung und die nächsten Schritte.",
+    "directHeading": "Direkt erreichen",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "addressLabel": "Adresse",
+    "responseLabel": "Antwortzeit",
+    "formHeading": "Anfrage senden",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Vor- und Nachname",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@firma.at",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Optional",
+      "topic": "Worum geht es?",
+      "topicOptions": {
+        "web": "Website / Webentwicklung",
+        "software": "Individuelle Software",
+        "automation": "Automatisierung / Integration",
+        "support": "IT-Support / Betreuung",
+        "maintenance": "Wartung & Pflege",
+        "other": "Etwas anderes"
+      },
+      "message": "Ihre Nachricht",
+      "messagePlaceholder": "Worum geht es, welches Ziel verfolgen Sie, und gibt es einen Zeitrahmen?",
+      "consent": "Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Details in der Datenschutzerklärung.",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet …",
+      "required": "Pflichtfeld"
+    },
+    "validation": {
+      "nameRequired": "Bitte geben Sie Ihren Namen an.",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse an.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
+      "messageRequired": "Bitte beschreiben Sie kurz Ihr Anliegen.",
+      "messageTooShort": "Bitte schreiben Sie etwas mehr (mindestens 10 Zeichen).",
+      "topicRequired": "Bitte wählen Sie ein Thema.",
+      "consentRequired": "Bitte stimmen Sie der Verarbeitung zu, damit wir antworten können."
+    },
+    "success": {
+      "heading": "Danke für Ihre Anfrage!",
+      "body": "Ihre Nachricht ist angekommen. Wir melden uns in der Regel innerhalb eines Werktags.",
+      "again": "Weitere Anfrage senden"
+    },
+    "error": {
+      "heading": "Das hat nicht geklappt",
+      "body": "Beim Senden ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.",
+      "retry": "Erneut versuchen"
+    },
+    "devNotice": "Hinweis: Im Vorschaubetrieb wird die Anfrage protokolliert, aber nicht versendet, bis ein E-Mail-Anbieter konfiguriert ist."
+  },
+  "legal": {
+    "draftNotice": "Vorlage – diese rechtlichen Angaben müssen vor der Veröffentlichung von einer fachkundigen Person geprüft und mit echten Daten ergänzt werden.",
+    "pendingField": "Noch zu bestätigen",
+    "legalNotice": {
+      "heading": "Impressum",
+      "intro": "Angaben gemäß §5 ECG, §14 UGB und §25 MedienG.",
+      "companyHeading": "Unternehmen",
+      "contactHeading": "Kontakt",
+      "registrationHeading": "Registrierung & Aufsicht",
+      "vatHeading": "Umsatzsteuer",
+      "disputeHeading": "Online-Streitbeilegung",
+      "disputeText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
+      "disputeNote": "Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und grundsätzlich nicht bereit.",
+      "liabilityHeading": "Haftung für Inhalte",
+      "liabilityText": "Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+      "copyrightHeading": "Urheberrecht",
+      "copyrightText": "Die auf dieser Website veröffentlichten Inhalte unterliegen dem österreichischen Urheberrecht. Jede Verwertung außerhalb der gesetzlichen Grenzen bedarf der vorherigen Zustimmung."
+    },
+    "privacy": {
+      "heading": "Datenschutzerklärung",
+      "intro": "Diese Erklärung informiert über die Verarbeitung personenbezogener Daten auf dieser Website gemäß Datenschutz-Grundverordnung (DSGVO).",
+      "controllerHeading": "Verantwortlicher",
+      "dataHeading": "Welche Daten wir verarbeiten",
+      "dataText": "Diese Website ist datensparsam gestaltet. Beim Aufruf werden technisch notwendige Server-Logdaten verarbeitet. Wenn Sie das Kontaktformular nutzen, verarbeiten wir die von Ihnen angegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage.",
+      "contactFormHeading": "Kontaktformular",
+      "contactFormText": "Die im Kontaktformular eingegebenen Daten (Name, E-Mail-Adresse, optionale Angaben und Ihre Nachricht) verwenden wir ausschließlich, um Ihre Anfrage zu beantworten. Eine Weitergabe an Dritte erfolgt nicht, sofern dies nicht zur Bearbeitung erforderlich ist.",
+      "cookiesHeading": "Cookies & Tracking",
+      "cookiesText": "Diese Website setzt keine Marketing- oder Tracking-Cookies und bindet keine externen Analyse-Dienste ein, sofern dies nicht ausdrücklich aktiviert und hier offengelegt wird.",
+      "rightsHeading": "Ihre Rechte",
+      "rightsText": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem können Sie sich bei der österreichischen Datenschutzbehörde beschweren.",
+      "rightsAuthority": "Österreichische Datenschutzbehörde: dsb.gv.at"
+    }
+  },
+  "preflight": {
+    "heading": "Pre-Launch-Status",
+    "intro": "Diese Übersicht ist nur in der Entwicklung sichtbar. Sie listet alle Platzhalter, die vor dem Live-Gang durch echte, freigegebene Angaben ersetzt werden müssen.",
+    "allConfirmed": "Alle erfassten Angaben sind bestätigt.",
+    "count": "offene Platzhalter",
+    "idLabel": "Kennung",
+    "noteLabel": "Zu tun",
+    "valueLabel": "Aktueller Platzhalter"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "heading": "Diese Seite gibt es nicht.",
+    "body": "Der Link ist möglicherweise veraltet oder enthält einen Tippfehler.",
+    "cta": "Zur Startseite"
+  },
+  "error": {
+    "heading": "Etwas ist schiefgelaufen",
+    "body": "Es ist ein unerwarteter Fehler aufgetreten. Bitte laden Sie die Seite neu.",
+    "retry": "Erneut versuchen"
+  }
+}
