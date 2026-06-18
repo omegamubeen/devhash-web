@@ -98,8 +98,7 @@ export function MobileMenu() {
         role="dialog"
         aria-modal="true"
         aria-label={a11y('mainNav')}
-        // @ts-expect-error — `inert` is a valid attribute (React 19) used here to remove the closed panel from the a11y tree.
-        inert={open ? undefined : ''}
+        inert={!open}
         className={cn(
           'surface-ink fixed inset-x-0 top-0 z-[var(--z-menu)] origin-top overflow-y-auto rounded-b-[var(--radius-2xl)] px-6 pt-5 pb-10 shadow-[var(--shadow-ink)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
           open ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0',
