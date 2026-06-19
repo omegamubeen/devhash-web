@@ -14,7 +14,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import { Icon } from '@/components/icons/icon-set';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.about' });
@@ -41,7 +45,7 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: 'DevHash', url: localizedUrl('/', locale) },
+          { name: 'durchX', url: localizedUrl('/', locale) },
           { name: t('heading'), url: localizedUrl('/about', locale) },
         ])}
       />
@@ -49,7 +53,7 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
         eyebrow={t('eyebrow')}
         title={t('heading')}
         intro={t('intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: t('eyebrow') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: t('eyebrow') }]}
       />
 
       {/* Story */}
@@ -64,24 +68,36 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
             <div className="card flex flex-col gap-5 p-7">
               <p className="text-balance">{company.shortDescription[locale]}</p>
               <div aria-hidden="true" className="rule-soft" />
-              <dl className="flex flex-col gap-4 text-sm">
-                <div className="flex items-center gap-3">
-                  <Icon name="pin" size={18} className="text-[var(--color-accent-strong)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted)]">{company.region.value[locale]}</dt>
-                    <dd className="font-medium">{company.serviceArea.value[locale]}</dd>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="globe" size={18} className="text-[var(--color-accent-strong)]" />
-                  <div>
-                    <dt className="text-[var(--color-muted)]">
+              <ul className="flex flex-col gap-4 text-sm">
+                <li className="flex items-center gap-3">
+                  <Icon
+                    name="pin"
+                    size={18}
+                    className="text-[var(--color-accent-strong)]"
+                  />
+                  <span>
+                    <span className="block text-[var(--color-muted)]">
+                      {company.region.value[locale]}
+                    </span>
+                    <span className="font-medium">
+                      {company.serviceArea.value[locale]}
+                    </span>
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Icon
+                    name="globe"
+                    size={18}
+                    className="text-[var(--color-accent-strong)]"
+                  />
+                  <span>
+                    <span className="block text-[var(--color-muted)]">
                       {locale === 'de' ? 'Sprachen' : 'Languages'}
-                    </dt>
-                    <dd className="font-medium">Deutsch · English</dd>
-                  </div>
-                </div>
-              </dl>
+                    </span>
+                    <span className="font-medium">Deutsch · English</span>
+                  </span>
+                </li>
+              </ul>
             </div>
           </Reveal>
         </div>
@@ -90,9 +106,13 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
       {/* Values */}
       <Section className="bg-[var(--color-sand-50)]">
         <Reveal>
-          <SectionHeader eyebrow={t('valuesHeading')} title={t('valuesHeading')} as="h2" />
+          <SectionHeader
+            eyebrow={t('valuesHeading')}
+            title={t('valuesHeading')}
+            as="h2"
+          />
         </Reveal>
-        <div className="auto-grid mt-10">
+        <div className="mt-10 auto-grid">
           {valueKeys.map((key, i) => (
             <Reveal key={key} delay={i * 60}>
               <div className="card flex h-full flex-col gap-2.5 p-6">
@@ -100,7 +120,9 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3 className="font-semibold">{t(`values.${key}.title`)}</h3>
-                <p className="text-sm text-[var(--color-muted)]">{t(`values.${key}.body`)}</p>
+                <p className="text-sm text-[var(--color-muted)]">
+                  {t(`values.${key}.body`)}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -125,18 +147,20 @@ export default async function AboutPage({ params }: { params: LocaleParams }) {
                   {i + 1}
                 </span>
                 {i < stepKeys.length - 1 ? (
-                  <span aria-hidden="true" className="rule-soft hidden flex-1 sm:block" />
+                  <span aria-hidden="true" className="hidden rule-soft flex-1 sm:block" />
                 ) : null}
               </div>
               <h3 className="font-semibold">{home(`process.steps.${key}.title`)}</h3>
-              <p className="text-sm text-[var(--color-muted)]">{home(`process.steps.${key}.body`)}</p>
+              <p className="text-sm text-[var(--color-muted)]">
+                {home(`process.steps.${key}.body`)}
+              </p>
             </Reveal>
           ))}
         </ol>
       </Section>
 
       <CtaBand
-        eyebrow="DevHash"
+        eyebrow="durchX"
         title={t('ctaHeading')}
         body={t('ctaBody')}
         primary={{ label: common('startProject'), href: '/contact' }}

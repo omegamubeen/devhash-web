@@ -23,7 +23,10 @@ export const support = {
     responseTime: placeholder<Localized>(
       'support.sla.responseTime',
       'support',
-      { de: 'Reaktionszeit innerhalb eines Werktags', en: 'Response within one business day' },
+      {
+        de: 'Reaktionszeit innerhalb eines Werktags',
+        en: 'Response within one business day',
+      },
       'Confirm the response time you can contractually guarantee.',
     ),
     criticalResponse: placeholder<Localized>(

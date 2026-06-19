@@ -11,7 +11,7 @@ export const contact = {
   email: placeholder(
     'contact.email',
     'contact',
-    'hello@devhash.example',
+    'hello@durchx.example',
     'Set the real, monitored contact mailbox and verify it can send/receive.',
   ),
 
@@ -36,12 +36,7 @@ export const contact = {
       '1010',
       'Confirm the postal code.',
     ),
-    city: placeholder(
-      'contact.address.city',
-      'contact',
-      'Wien',
-      'Confirm the city.',
-    ),
+    city: placeholder('contact.address.city', 'contact', 'Wien', 'Confirm the city.'),
     country: confirmed<Localized>('contact.address.country', 'contact', {
       de: 'Österreich',
       en: 'Austria',
@@ -54,13 +49,13 @@ export const contact = {
     linkedin: placeholder(
       'contact.social.linkedin',
       'social',
-      'https://www.linkedin.com/company/devhash',
+      'https://www.linkedin.com/company/durchx',
       'Confirm the real LinkedIn company URL, or remove the link.',
     ),
     github: placeholder(
       'contact.social.github',
       'social',
-      'https://github.com/devhash',
+      'https://github.com/durchx',
       'Confirm the real GitHub org URL, or remove the link.',
     ),
   },

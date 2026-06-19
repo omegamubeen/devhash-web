@@ -12,6 +12,7 @@ export type IconName =
   | 'flow'
   | 'support'
   | 'shield'
+  | 'mobile'
   | 'arrowRight'
   | 'arrowUpRight'
   | 'check'
@@ -33,6 +34,13 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M3 9h18" />
       <path d="M6.5 6.7h.01M9 6.7h.01" />
       <path d="M8 13l-1.8 1.8L8 16.6M13 13l1.8 1.8L13 16.6" />
+    </>
+  ),
+  mobile: (
+    <>
+      <rect x="6.5" y="2.5" width="11" height="19" rx="2.6" />
+      <path d="M10 5.5h4" />
+      <path d="M9.6 18.5h4.8" />
     </>
   ),
   code: (
@@ -90,8 +98,12 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M3.8 12h16.4M12 3.8c2.3 2.3 3.4 5.1 3.4 8.2 0 3.1-1.1 5.9-3.4 8.2-2.3-2.3-3.4-5.1-3.4-8.2 0-3.1 1.1-5.9 3.4-8.2Z" />
     </>
   ),
-  external: <path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />,
-  spark: <path d="M12 3.5c.4 4.3 1.7 5.6 6 6-4.3.4-5.6 1.7-6 6-.4-4.3-1.7-5.6-6-6 4.3-.4 5.6-1.7 6-6Z" />,
+  external: (
+    <path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4" />
+  ),
+  spark: (
+    <path d="M12 3.5c.4 4.3 1.7 5.6 6 6-4.3.4-5.6 1.7-6 6-.4-4.3-1.7-5.6-6-6 4.3-.4 5.6-1.7 6-6Z" />
+  ),
   plus: <path d="M12 5v14M5 12h14" />,
 };
 

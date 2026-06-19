@@ -13,7 +13,13 @@ const variantClass: Record<Variant, string> = {
 };
 
 function classes(variant: Variant, size: Size, block?: boolean, extra?: string) {
-  return cn('btn', variantClass[variant], size === 'lg' && 'btn-lg', block && 'btn-block', extra);
+  return cn(
+    'btn',
+    variantClass[variant],
+    size === 'lg' && 'btn-lg',
+    block && 'btn-block',
+    extra,
+  );
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

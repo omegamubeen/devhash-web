@@ -14,7 +14,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { breadcrumbSchema } from '@/lib/structured-data';
 import { Icon } from '@/components/icons/icon-set';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.contact' });
@@ -40,7 +44,7 @@ export default async function ContactPage({ params }: { params: LocaleParams }) 
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: 'DevHash', url: localizedUrl('/', locale) },
+          { name: 'durchX', url: localizedUrl('/', locale) },
           { name: t('heading'), url: localizedUrl('/contact', locale) },
         ])}
       />
@@ -48,7 +52,7 @@ export default async function ContactPage({ params }: { params: LocaleParams }) 
         eyebrow={t('eyebrow')}
         title={t('heading')}
         intro={t('intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: t('eyebrow') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: t('eyebrow') }]}
       />
 
       <section className="section-sm">
@@ -88,7 +92,9 @@ export default async function ContactPage({ params }: { params: LocaleParams }) 
                     </ContactRow>
                   ) : null}
                   <ContactRow icon="globe" label={t('responseLabel')}>
-                    <span className="font-medium">{company.serviceArea.value[locale]}</span>
+                    <span className="font-medium">
+                      {company.serviceArea.value[locale]}
+                    </span>
                   </ContactRow>
                 </ul>
               </div>

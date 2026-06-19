@@ -27,7 +27,11 @@ export default async function PreflightPage({ params }: { params: LocaleParams }
 
   return (
     <Section>
-      <SectionHeader eyebrow={`${total} ${t('count')}`} title={t('heading')} intro={t('intro')} />
+      <SectionHeader
+        eyebrow={`${total} ${t('count')}`}
+        title={t('heading')}
+        intro={t('intro')}
+      />
       {total === 0 ? (
         <p className="mt-8 text-[var(--color-accent-strong)]">{t('allConfirmed')}</p>
       ) : (
@@ -48,7 +52,10 @@ export default async function PreflightPage({ params }: { params: LocaleParams }
                   </thead>
                   <tbody>
                     {facts.map((fact) => (
-                      <tr key={fact.id} className="border-b border-[var(--color-border)] align-top">
+                      <tr
+                        key={fact.id}
+                        className="border-b border-[var(--color-border)] align-top"
+                      >
                         <td className="py-3 pr-4 font-mono text-xs">{fact.id}</td>
                         <td className="py-3 pr-4 text-[var(--color-muted)]">
                           {typeof fact.value === 'object'

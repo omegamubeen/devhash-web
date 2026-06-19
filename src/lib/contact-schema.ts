@@ -2,7 +2,15 @@
  * Enquiry validation. Returns stable error *codes* (not messages) so it can be
  * unit-tested without i18n; the server action maps codes to localized strings.
  */
-export const TOPICS = ['web', 'software', 'automation', 'support', 'maintenance', 'other'] as const;
+export const TOPICS = [
+  'web',
+  'mobile',
+  'software',
+  'automation',
+  'support',
+  'maintenance',
+  'other',
+] as const;
 export type Topic = (typeof TOPICS)[number];
 
 export type FieldName = 'name' | 'email' | 'topic' | 'message' | 'consent';
@@ -40,7 +48,8 @@ export function validateEnquiry(input: EnquiryInput): FieldErrors {
   if (!input.email.trim()) errors.email = 'emailRequired';
   else if (!EMAIL_RE.test(input.email.trim())) errors.email = 'emailInvalid';
 
-  if (!input.topic || !TOPICS.includes(input.topic as Topic)) errors.topic = 'topicRequired';
+  if (!input.topic || !TOPICS.includes(input.topic as Topic))
+    errors.topic = 'topicRequired';
 
   if (!input.message.trim()) errors.message = 'messageRequired';
   else if (input.message.trim().length < MESSAGE_MIN) errors.message = 'messageTooShort';

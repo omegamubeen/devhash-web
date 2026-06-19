@@ -16,7 +16,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { breadcrumbSchema, faqSchema } from '@/lib/structured-data';
 import { Icon } from '@/components/icons/icon-set';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.pricing' });
@@ -41,7 +45,7 @@ export default async function PricingPage({ params }: { params: LocaleParams }) 
     { question: t('faq.q3'), answer: t('faq.a3') },
   ];
   const breadcrumb = [
-    { name: 'DevHash', url: localizedUrl('/', locale) },
+    { name: 'durchX', url: localizedUrl('/', locale) },
     { name: t('heading'), url: localizedUrl('/pricing', locale) },
   ];
 
@@ -52,7 +56,7 @@ export default async function PricingPage({ params }: { params: LocaleParams }) 
         eyebrow={t('eyebrow')}
         title={t('heading')}
         intro={t('intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: t('heading') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: t('heading') }]}
       />
 
       <Section size="sm">
@@ -96,7 +100,7 @@ export default async function PricingPage({ params }: { params: LocaleParams }) 
       </Section>
 
       <CtaBand
-        eyebrow="DevHash"
+        eyebrow="durchX"
         title={t('heading')}
         body={t('intro')}
         primary={{ label: common('startProject'), href: '/contact' }}

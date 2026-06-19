@@ -26,11 +26,16 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
                   {item.label}
                 </Link>
               ) : (
-                <span aria-current={last ? 'page' : undefined} className={last ? 'text-[var(--color-fg)]' : undefined}>
+                <span
+                  aria-current={last ? 'page' : undefined}
+                  className={last ? 'text-[var(--color-fg)]' : undefined}
+                >
                   {item.label}
                 </span>
               )}
-              {!last ? <Icon name="chevronDown" size={12} className="-rotate-90 opacity-50" /> : null}
+              {!last ? (
+                <Icon name="chevronDown" size={12} className="-rotate-90 opacity-50" />
+              ) : null}
             </li>
           );
         })}

@@ -9,7 +9,7 @@ export const integrations = {
     provider: 'resend' as const,
     apiKey: process.env.RESEND_API_KEY ?? '',
     inbox: process.env.CONTACT_INBOX ?? '',
-    from: process.env.CONTACT_FROM ?? 'DevHash Website <noreply@example.com>',
+    from: process.env.CONTACT_FROM ?? 'durchX Website <noreply@example.com>',
     /** When false, the form validates + logs but does not send (safe default). */
     get enabled() {
       return Boolean(this.apiKey && this.inbox);

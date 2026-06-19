@@ -3,25 +3,20 @@ import type { Localized } from '@/lib/types';
 
 /**
  * Company identity. Marketing copy (tagline, descriptions, positioning) is
- * authored and may render freely. Hard identity facts (final brand name, legal
- * name, founding year) are confirmable — "DevHash" is a working placeholder
- * brand and must be confirmed before launch.
+ * authored and may render freely. "durchX" is the chosen brand name (confirmed);
+ * the registered legal entity name, legal form and founding year still require
+ * confirmation before launch.
  */
 export const company = {
-  /** Working brand name — confirm final name & spelling before launch. */
-  brand: placeholder(
-    'company.brand',
-    'company',
-    'DevHash',
-    'Confirm the final, legally usable brand/trade name and exact spelling.',
-  ),
+  /** Chosen brand/trade name. */
+  brand: confirmed('company.brand', 'company', 'durchX'),
 
   /** Registered legal entity name. */
   legalName: placeholder(
     'company.legalName',
     'company',
-    'DevHash e.U.',
-    'Confirm the registered legal name and legal form (e.U., GmbH, OG, …).',
+    'durchX e.U.',
+    'Confirm the registered legal name and legal form (e.U., GmbH, OG, …) once the business is registered. Verify "durchX" trade-name availability.',
   ),
 
   /** Year the business was founded — never claim experience we cannot prove. */
@@ -56,7 +51,7 @@ export const company = {
 
   /** Short "about us" paragraph — honest, no invented metrics. */
   shortDescription: {
-    de: 'DevHash ist ein technisches Software‑ und IT‑Studio. Wir verbinden saubere Entwicklung mit klarer Beratung und langfristiger Betreuung, damit Technik im Hintergrund verlässlich funktioniert.',
-    en: 'DevHash is a technical software and IT studio. We combine careful engineering with clear advice and long-term support, so the technology behind your business simply works.',
+    de: 'durchX ist ein technisches Software‑ und IT‑Studio. Wir verbinden saubere Entwicklung mit klarer Beratung und langfristiger Betreuung, damit Technik im Hintergrund verlässlich funktioniert.',
+    en: 'durchX is a technical software and IT studio. We combine careful engineering with clear advice and long-term support, so the technology behind your business simply works.',
   } satisfies Localized,
 } as const;

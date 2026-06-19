@@ -1,8 +1,8 @@
 {
   "metadata": {
     "home": {
-      "title": "DevHash – Webentwicklung, Software & IT-Betreuung in Wien",
-      "description": "DevHash plant, entwickelt und betreut Websites, individuelle Software und IT für Unternehmen in Wien und der DACH-Region – von der Idee bis zum laufenden Betrieb."
+      "title": "durchX – Webentwicklung, Software & IT-Betreuung in Wien",
+      "description": "durchX plant, entwickelt und betreut Websites, individuelle Software und IT für Unternehmen in Wien und der DACH-Region – von der Idee bis zum laufenden Betrieb."
     },
     "services": {
       "title": "Leistungen – Webentwicklung, Software, Automatisierung & IT",
@@ -13,8 +13,8 @@
       "description": "So arbeiten wir zusammen: Projekt zum Festrahmen, laufende Betreuung oder dedizierte Entwicklung. Transparente Modelle statt Lockpreise – Angebot nach Klärung des Umfangs."
     },
     "about": {
-      "title": "Über DevHash – Software- und IT-Studio aus Wien",
-      "description": "DevHash ist ein technisches Software- und IT-Studio aus Wien. Wir verbinden saubere Entwicklung mit klarer Beratung und langfristiger Betreuung."
+      "title": "Über durchX – Software- und IT-Studio aus Wien",
+      "description": "durchX ist ein technisches Software- und IT-Studio aus Wien. Wir verbinden saubere Entwicklung mit klarer Beratung und langfristiger Betreuung."
     },
     "contact": {
       "title": "Kontakt – Projekt anfragen",
@@ -65,7 +65,7 @@
     "switchToGerman": "Auf Deutsch wechseln",
     "languageLabel": "Sprache",
     "breadcrumb": "Brotkrumen-Navigation",
-    "homeLink": "DevHash – Startseite",
+    "homeLink": "durchX – Startseite",
     "currentPage": "Aktuelle Seite"
   },
   "header": {
@@ -84,7 +84,9 @@
     "hero": {
       "eyebrow": "Software & IT-Studio aus Wien",
       "headline": "Digitale Produkte, die im Alltag verlässlich funktionieren.",
-      "subhead": "Wir planen, entwickeln und betreuen Websites, individuelle Software und Automatisierung für Unternehmen in Wien und der DACH-Region – mit sauberem Code und klarer Kommunikation.",
+      "build": "Wir entwickeln",
+      "rotating": ["Websites", "Mobile Apps", "individuelle Software", "smarte Automatisierung"],
+      "subhead": "Und wir betreuen sie zuverlässig weiter – mit sauberem Code und klarer Kommunikation, aus Wien für die DACH-Region.",
       "primaryCta": "Projekt anfragen",
       "secondaryCta": "Leistungen ansehen",
       "note": "Erstgespräch ohne Verpflichtung. Angebot erst nach Klärung des Umfangs."
@@ -194,7 +196,7 @@
   "about": {
     "eyebrow": "Über uns",
     "heading": "Ein Studio für Software und IT, das langfristig denkt",
-    "intro": "DevHash verbindet Entwicklung, Beratung und Betreuung. Wir bauen nicht nur, was heute gefragt ist, sondern was morgen noch trägt.",
+    "intro": "durchX verbindet Entwicklung, Beratung und Betreuung. Wir bauen nicht nur, was heute gefragt ist, sondern was morgen noch trägt.",
     "storyHeading": "Worum es uns geht",
     "story1": "Viele technische Projekte scheitern nicht an der Technik, sondern an unklaren Erwartungen, fehlender Pflege und Lösungen, die niemand mehr versteht. Genau dort setzen wir an.",
     "story2": "Wir arbeiten in nachvollziehbaren Schritten, dokumentieren, was wir tun, und bleiben ansprechbar, wenn ein Projekt live ist. So entsteht Technik, die im Alltag trägt – nicht nur in der Demo.",
@@ -241,6 +243,7 @@
       "topic": "Worum geht es?",
       "topicOptions": {
         "web": "Website / Webentwicklung",
+        "mobile": "Mobile App (iOS & Android)",
         "software": "Individuelle Software",
         "automation": "Automatisierung / Integration",
         "support": "IT-Support / Betreuung",

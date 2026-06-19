@@ -9,7 +9,11 @@ import { Container } from '@/components/primitives/layout';
 import { PageHeader } from '@/components/sections/page-header';
 import { LegalNotice } from './legal-notice';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.legalNotice' });
@@ -37,7 +41,7 @@ export default async function LegalNoticePage({ params }: { params: LocaleParams
         eyebrow="Impressum / Legal notice"
         title={t('legalNotice.heading')}
         intro={t('legalNotice.intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: t('legalNotice.heading') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: t('legalNotice.heading') }]}
       />
       <section className="section-sm">
         <Container>

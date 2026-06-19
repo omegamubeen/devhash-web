@@ -22,7 +22,7 @@ interface BuildMetadataArgs {
   hrefByLocale: Record<Locale, Href>;
   title: string;
   description: string;
-  /** Title already includes the brand; skip the "| DevHash" template. */
+  /** Title already includes the brand; skip the "| durchX" template. */
   titleAbsolute?: boolean;
   ogImage?: string;
   keywords?: string[];
@@ -55,7 +55,9 @@ export function buildMetadata({
 
   // og:image / twitter:image are produced by the opengraph-image file convention
   // (a build-time 1200×630 PNG). Pages may override with an explicit `ogImage`.
-  const imageOverride = ogImage ? [{ url: ogImage, width: 1200, height: 630, alt: title }] : undefined;
+  const imageOverride = ogImage
+    ? [{ url: ogImage, width: 1200, height: 630, alt: title }]
+    : undefined;
 
   return {
     title: titleAbsolute ? { absolute: title } : title,
@@ -77,7 +79,9 @@ export function buildMetadata({
       title,
       description,
       ...(imageOverride ? { images: imageOverride.map((i) => i.url) } : {}),
-      ...(seo.twitterHandle ? { site: seo.twitterHandle, creator: seo.twitterHandle } : {}),
+      ...(seo.twitterHandle
+        ? { site: seo.twitterHandle, creator: seo.twitterHandle }
+        : {}),
     },
   };
 }

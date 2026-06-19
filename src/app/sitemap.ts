@@ -16,10 +16,16 @@ const staticHrefs: Href[] = [
   '/privacy',
 ];
 
-function entry(href: Href, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']) {
+function entry(
+  href: Href,
+  priority: number,
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'],
+) {
   const languages: Record<string, string> = {};
   for (const loc of locales) {
-    languages[loc === 'de' ? 'de-AT' : 'en'] = absoluteUrl(getPathname({ locale: loc, href }));
+    languages[loc === 'de' ? 'de-AT' : 'en'] = absoluteUrl(
+      getPathname({ locale: loc, href }),
+    );
   }
   return locales.map((loc: Locale) => ({
     url: absoluteUrl(getPathname({ locale: loc, href })),
@@ -39,12 +45,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const languages: Record<string, string> = {};
     for (const loc of locales) {
       languages[loc === 'de' ? 'de-AT' : 'en'] = absoluteUrl(
-        getPathname({ locale: loc, href: { pathname: '/services/[slug]', params: { slug: s.slug[loc] } } }),
+        getPathname({
+          locale: loc,
+          href: { pathname: '/services/[slug]', params: { slug: s.slug[loc] } },
+        }),
       );
     }
     return locales.map((loc) => ({
       url: absoluteUrl(
-        getPathname({ locale: loc, href: { pathname: '/services/[slug]', params: { slug: s.slug[loc] } } }),
+        getPathname({
+          locale: loc,
+          href: { pathname: '/services/[slug]', params: { slug: s.slug[loc] } },
+        }),
       ),
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

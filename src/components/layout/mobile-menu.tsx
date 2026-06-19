@@ -101,7 +101,9 @@ export function MobileMenu() {
         inert={!open}
         className={cn(
           'surface-ink fixed inset-x-0 top-0 z-[var(--z-menu)] origin-top overflow-y-auto rounded-b-[var(--radius-2xl)] px-6 pt-5 pb-10 shadow-[var(--shadow-ink)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
-          open ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0',
+          open
+            ? 'translate-y-0 opacity-100'
+            : 'pointer-events-none -translate-y-4 opacity-0',
         )}
       >
         <div className="mb-8 flex items-center justify-between">
@@ -130,7 +132,11 @@ export function MobileMenu() {
                   className="flex items-center justify-between py-4 text-2xl font-medium transition-colors duration-200 hover:text-[var(--color-accent-bright)]"
                 >
                   {nav(item.labelKey)}
-                  <Icon name="arrowUpRight" size={20} className="text-[var(--color-muted)]" />
+                  <Icon
+                    name="arrowUpRight"
+                    size={20}
+                    className="text-[var(--color-muted)]"
+                  />
                 </Link>
               </li>
             ))}
@@ -147,7 +153,10 @@ export function MobileMenu() {
         <ul className="mt-8 flex gap-5 font-mono text-xs tracking-wide text-[var(--color-muted)] uppercase">
           {footerLegalNav.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className="transition-colors hover:text-[var(--color-fg)]">
+              <Link
+                href={item.href}
+                className="transition-colors hover:text-[var(--color-fg)]"
+              >
                 {nav(item.labelKey)}
               </Link>
             </li>

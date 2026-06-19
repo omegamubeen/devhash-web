@@ -26,19 +26,8 @@ export async function submitEnquiry(
   const locale = isLocale(rawLocale) ? rawLocale : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'contact' });
 
-  // Honeypot: bots fill this hidden field. Pretend success, drop silently.
+  // Honeypot: a hidden field only bots fill. Drop silently (feign success).
   if (String(formData.get('company_url') ?? '').trim() !== '') {
-    return { status: 'success' };
-  }
-
-  // Timing trap: a genuine human takes more than ~1.2s to fill the form.
-  const ts = Number(formData.get('ts') ?? 0);
-  if (ts && Date.now() - ts < 1200) {
-    return { status: 'success' };
-  }
-
-  // Optional shared secret (extra anti-spam). When set, mismatches are dropped.
-  if (integrations.formSecret && String(formData.get('secret') ?? '') !== integrations.formSecret) {
     return { status: 'success' };
   }
 
@@ -51,6 +40,7 @@ export async function submitEnquiry(
     consent: formData.get('consent') === 'on',
   };
 
+  // Validate first so humans always get real feedback (never a fake success).
   const fieldErrors = validateEnquiry(input);
   if (Object.keys(fieldErrors).length > 0) {
     const localized: Partial<Record<keyof FieldErrors, string>> = {};
@@ -58,6 +48,19 @@ export async function submitEnquiry(
       localized[field as keyof FieldErrors] = t(`validation.${code}`);
     }
     return { status: 'error', errors: localized };
+  }
+
+  // Anti-spam traps apply only to otherwise-valid submissions: a complete form
+  // filled in under ~1.2s, or a mismatched shared secret, is treated as a bot.
+  const ts = Number(formData.get('ts') ?? 0);
+  if (ts && Date.now() - ts < 1200) {
+    return { status: 'success' };
+  }
+  if (
+    integrations.formSecret &&
+    String(formData.get('secret') ?? '') !== integrations.formSecret
+  ) {
+    return { status: 'success' };
   }
 
   const result = await sendEnquiry({

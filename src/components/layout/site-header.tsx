@@ -24,7 +24,9 @@ export function SiteHeader() {
   }, []);
 
   const isActive = (href: string) =>
-    href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
+    href === '/'
+      ? pathname === '/'
+      : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header

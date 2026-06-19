@@ -50,11 +50,7 @@ function register<T>(fact: Fact<T>): Fact<T> {
 }
 
 /** A real, approved value that is safe to show publicly. */
-export function confirmed<T>(
-  id: string,
-  category: FactCategory,
-  value: T,
-): Fact<T> {
+export function confirmed<T>(id: string, category: FactCategory, value: T): Fact<T> {
   return register({ id, value, status: 'confirmed', category });
 }
 

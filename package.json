@@ -1,8 +1,8 @@
 {
-  "name": "devhash-website",
+  "name": "durchx-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Bilingual (de-AT / en) marketing website for DevHash — Vienna-based IT studio. Placeholder brand pending confirmation.",
+  "description": "Bilingual (de-AT / en) marketing website for durchX — Vienna-based IT studio. Placeholder brand pending confirmation.",
   "type": "module",
   "engines": {
     "node": ">=20.11"

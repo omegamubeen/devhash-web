@@ -50,7 +50,8 @@ export function ContactForm() {
     );
   }
 
-  const fieldError = (name: keyof NonNullable<ContactState['errors']>) => state.errors?.[name];
+  const fieldError = (name: keyof NonNullable<ContactState['errors']>) =>
+    state.errors?.[name];
 
   return (
     <form ref={formRef} action={formAction} noValidate className="flex flex-col gap-5">
@@ -127,7 +128,9 @@ export function ContactForm() {
             className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-[var(--color-muted)]"
           />
         </div>
-        {fieldError('topic') ? <ErrorText id={`${ids}-topic-error`}>{fieldError('topic')}</ErrorText> : null}
+        {fieldError('topic') ? (
+          <ErrorText id={`${ids}-topic-error`}>{fieldError('topic')}</ErrorText>
+        ) : null}
       </div>
 
       <div className="flex flex-col gap-2">
@@ -179,7 +182,12 @@ export function ContactForm() {
         ) : null}
       </div>
 
-      <Button type="submit" size="lg" disabled={isPending} icon={isPending ? undefined : 'arrowRight'}>
+      <Button
+        type="submit"
+        size="lg"
+        disabled={isPending}
+        icon={isPending ? undefined : 'arrowRight'}
+      >
         {isPending ? t('form.submitting') : t('form.submit')}
       </Button>
 
@@ -217,7 +225,16 @@ interface FieldProps {
   error?: string;
 }
 
-function Field({ id, name, label, type = 'text', placeholder, required, autoComplete, error }: FieldProps) {
+function Field({
+  id,
+  name,
+  label,
+  type = 'text',
+  placeholder,
+  required,
+  autoComplete,
+  error,
+}: FieldProps) {
   const t = useTranslations('contact');
   return (
     <div className="flex flex-col gap-2">

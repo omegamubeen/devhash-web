@@ -11,7 +11,11 @@ import { Container } from '@/components/primitives/layout';
 import { PageHeader } from '@/components/sections/page-header';
 import { FactText } from '@/components/primitives/fact';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.privacy' });
@@ -39,7 +43,7 @@ export default async function PrivacyPage({ params }: { params: LocaleParams }) 
         eyebrow="Datenschutz / Privacy"
         title={p('heading')}
         intro={p('intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: p('heading') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: p('heading') }]}
       />
       <section className="section-sm">
         <Container>
@@ -54,7 +58,10 @@ export default async function PrivacyPage({ params }: { params: LocaleParams }) 
             <p>
               <strong>{company.brand.value}</strong>
               <br />
-              <FactText fact={contact.address.street} fallback={t('pendingField')} />,{' '}
+              <FactText
+                fact={contact.address.street}
+                fallback={t('pendingField')}
+              />,{' '}
               <FactText fact={contact.address.postalCode} fallback={t('pendingField')} />{' '}
               <FactText fact={contact.address.city} fallback={t('pendingField')} />,{' '}
               {contact.address.country.value[locale]}

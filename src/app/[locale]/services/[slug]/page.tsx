@@ -64,7 +64,7 @@ export default async function ServiceDetailPage({
     locale,
   );
   const breadcrumb = [
-    { name: 'DevHash', url: localizedUrl('/', locale) },
+    { name: 'durchX', url: localizedUrl('/', locale) },
     { name: servicesT('heading'), url: localizedUrl('/services', locale) },
     { name: service.title[locale], url },
   ];
@@ -97,7 +97,7 @@ export default async function ServiceDetailPage({
         title={service.title[locale]}
         intro={service.tagline[locale]}
         breadcrumb={[
-          { label: 'DevHash', href: '/' },
+          { label: 'durchX', href: '/' },
           { label: servicesT('heading'), href: '/services' },
           { label: service.title[locale] },
         ]}
@@ -120,7 +120,9 @@ export default async function ServiceDetailPage({
       <Section size="sm">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           <Reveal>
-            <p className="text-xl leading-relaxed text-balance">{service.intro[locale]}</p>
+            <p className="text-xl leading-relaxed text-balance">
+              {service.intro[locale]}
+            </p>
           </Reveal>
           <Reveal className="flex flex-col gap-4">
             <span className="eyebrow">{t('theChallenge')}</span>
@@ -152,7 +154,9 @@ export default async function ServiceDetailPage({
                   <Icon name="check" size={18} />
                 </div>
                 <h3 className="font-semibold">{feature.title[locale]}</h3>
-                <p className="text-sm text-[var(--color-muted)]">{feature.description[locale]}</p>
+                <p className="text-sm text-[var(--color-muted)]">
+                  {feature.description[locale]}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -172,11 +176,13 @@ export default async function ServiceDetailPage({
                   {i + 1}
                 </span>
                 {i < service.process.length - 1 ? (
-                  <span aria-hidden="true" className="rule-soft hidden flex-1 sm:block" />
+                  <span aria-hidden="true" className="hidden rule-soft flex-1 sm:block" />
                 ) : null}
               </div>
               <h3 className="font-semibold">{step.title[locale]}</h3>
-              <p className="text-sm text-[var(--color-muted)]">{step.description[locale]}</p>
+              <p className="text-sm text-[var(--color-muted)]">
+                {step.description[locale]}
+              </p>
             </Reveal>
           ))}
         </ol>
@@ -239,12 +245,21 @@ export default async function ServiceDetailPage({
       {related.length > 0 ? (
         <Section className="bg-[var(--color-sand-50)]" size="sm">
           <Reveal>
-            <SectionHeader eyebrow={t('relatedServices')} title={servicesT('heading')} as="h2" />
+            <SectionHeader
+              eyebrow={t('relatedServices')}
+              title={servicesT('heading')}
+              as="h2"
+            />
           </Reveal>
-          <div className="auto-grid mt-10">
+          <div className="mt-10 auto-grid">
             {related.map((s, i) => (
               <Reveal key={s.id} delay={i * 60}>
-                <ServiceCard service={s} locale={locale} index={s.order - 1} className="h-full" />
+                <ServiceCard
+                  service={s}
+                  locale={locale}
+                  index={s.order - 1}
+                  className="h-full"
+                />
               </Reveal>
             ))}
           </div>
@@ -252,7 +267,7 @@ export default async function ServiceDetailPage({
       ) : null}
 
       <CtaBand
-        eyebrow="DevHash"
+        eyebrow="durchX"
         title={service.tagline[locale]}
         body={service.summary[locale]}
         primary={{ label: t('startProject'), href: '/contact' }}

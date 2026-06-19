@@ -12,5 +12,12 @@
     "react/no-unescaped-entities": "off",
     "react/jsx-no-target-blank": "error"
   },
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "coverage/", "playwright-report/", "test-results/"]
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "coverage/",
+    "playwright-report/",
+    "test-results/"
+  ]
 }

@@ -14,7 +14,11 @@ import { CtaBand } from '@/components/sections/cta-band';
 import { JsonLd } from '@/components/seo/json-ld';
 import { breadcrumbSchema } from '@/lib/structured-data';
 
-export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: LocaleParams;
+}): Promise<Metadata> {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: 'metadata.services' });
@@ -36,7 +40,7 @@ export default async function ServicesPage({ params }: { params: LocaleParams })
   const common = await getTranslations('common');
 
   const breadcrumb = [
-    { name: 'DevHash', url: localizedUrl('/', locale) },
+    { name: 'durchX', url: localizedUrl('/', locale) },
     { name: t('heading'), url: localizedUrl('/services', locale) },
   ];
 
@@ -47,14 +51,19 @@ export default async function ServicesPage({ params }: { params: LocaleParams })
         eyebrow={t('eyebrow')}
         title={t('heading')}
         intro={t('intro')}
-        breadcrumb={[{ label: 'DevHash', href: '/' }, { label: t('heading') }]}
+        breadcrumb={[{ label: 'durchX', href: '/' }, { label: t('heading') }]}
       />
 
       <Section size="sm">
         <div className="auto-grid">
           {servicesInOrder.map((service, i) => (
             <Reveal key={service.id} delay={i * 60}>
-              <ServiceCard service={service} locale={locale} index={i} className="h-full" />
+              <ServiceCard
+                service={service}
+                locale={locale}
+                index={i}
+                className="h-full"
+              />
             </Reveal>
           ))}
         </div>

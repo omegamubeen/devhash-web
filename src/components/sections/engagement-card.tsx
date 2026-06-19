@@ -24,7 +24,8 @@ export function EngagementCard({
   const price = model.startingFrom ? reveal(model.startingFrom) : null;
 
   const showFrom = PRICING_MODE === 'startingFrom' && price;
-  const showConsultation = PRICING_MODE === 'consultation' || (PRICING_MODE === 'startingFrom' && !price);
+  const showConsultation =
+    PRICING_MODE === 'consultation' || (PRICING_MODE === 'startingFrom' && !price);
 
   return (
     <div className="card flex h-full flex-col gap-6 p-7">
@@ -47,12 +48,16 @@ export function EngagementCard({
               <span className="text-2xl font-semibold">
                 €{price.amount.toLocaleString(locale === 'de' ? 'de-AT' : 'en-US')}
               </span>
-              <span className="text-sm text-[var(--color-muted)]">{price.unit[locale]}</span>
+              <span className="text-sm text-[var(--color-muted)]">
+                {price.unit[locale]}
+              </span>
             </p>
           ) : showConsultation ? (
             <div className="flex flex-col">
               <span className="font-semibold">{t('consultationLabel')}</span>
-              <span className="text-sm text-[var(--color-muted)]">{t('consultationHint')}</span>
+              <span className="text-sm text-[var(--color-muted)]">
+                {t('consultationHint')}
+              </span>
             </div>
           ) : null}
         </div>
@@ -78,7 +83,9 @@ export function EngagementCard({
       </Detail>
 
       <Detail label={t('modelLabel')}>
-        <p className="text-sm text-[var(--color-muted)]">{model.engagementModel[locale]}</p>
+        <p className="text-sm text-[var(--color-muted)]">
+          {model.engagementModel[locale]}
+        </p>
       </Detail>
 
       <Detail label={t('factorsLabel')}>
@@ -92,7 +99,12 @@ export function EngagementCard({
       </Detail>
 
       <div className="mt-auto pt-2">
-        <LinkButton href={model.nextAction.href} variant="secondary" icon="arrowRight" block>
+        <LinkButton
+          href={model.nextAction.href}
+          variant="secondary"
+          icon="arrowRight"
+          block
+        >
           {model.nextAction.label[locale]}
         </LinkButton>
       </div>

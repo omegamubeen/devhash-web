@@ -32,7 +32,10 @@ export function SiteFooter() {
             {servicesInOrder.map((s) => (
               <li key={s.id}>
                 <Link
-                  href={{ pathname: '/services/[slug]', params: { slug: s.slug[locale] } }}
+                  href={{
+                    pathname: '/services/[slug]',
+                    params: { slug: s.slug[locale] },
+                  }}
                   className="text-[var(--color-muted)] transition-colors duration-200 hover:text-[var(--color-fg)]"
                 >
                   {s.title[locale]}
@@ -77,7 +80,11 @@ export function SiteFooter() {
           <ul className="flex flex-col gap-2.5 text-sm text-[var(--color-muted)]">
             {factVisible(contact.email) ? (
               <li className="flex items-center gap-2">
-                <Icon name="mail" size={16} className="shrink-0 text-[var(--color-accent-bright)]" />
+                <Icon
+                  name="mail"
+                  size={16}
+                  className="shrink-0 text-[var(--color-accent-bright)]"
+                />
                 <a
                   href={`mailto:${contact.email.value}`}
                   className="transition-colors hover:text-[var(--color-fg)]"
@@ -88,12 +95,20 @@ export function SiteFooter() {
             ) : null}
             {factVisible(contact.phone) ? (
               <li className="flex items-center gap-2">
-                <Icon name="phone" size={16} className="shrink-0 text-[var(--color-accent-bright)]" />
+                <Icon
+                  name="phone"
+                  size={16}
+                  className="shrink-0 text-[var(--color-accent-bright)]"
+                />
                 <FactText fact={contact.phone} />
               </li>
             ) : null}
             <li className="flex items-start gap-2">
-              <Icon name="pin" size={16} className="mt-0.5 shrink-0 text-[var(--color-accent-bright)]" />
+              <Icon
+                name="pin"
+                size={16}
+                className="mt-0.5 shrink-0 text-[var(--color-accent-bright)]"
+              />
               <span>{company.serviceArea.value[locale]}</span>
             </li>
           </ul>

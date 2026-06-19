@@ -19,10 +19,19 @@ export default defineConfig({
     baseURL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    // Stable, deterministic runs: no entrance animations mid-assertion, and we
+    // exercise the prefers-reduced-motion experience.
+    reducedMotion: 'reduce',
   },
   projects: [
-    { name: 'chromium-desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 800 } } },
-    { name: 'firefox-desktop', use: { ...devices['Desktop Firefox'], viewport: { width: 1280, height: 800 } } },
+    {
+      name: 'chromium-desktop',
+      use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 800 } },
+    },
+    {
+      name: 'firefox-desktop',
+      use: { ...devices['Desktop Firefox'], viewport: { width: 1280, height: 800 } },
+    },
     { name: 'mobile-safari', use: { ...devices['iPhone 13'] } },
     { name: 'mobile-chrome', use: { ...devices['Pixel 7'] } },
   ],

@@ -50,7 +50,8 @@ export function Accordion({ items, multiple = false, className }: AccordionProps
                 <span
                   className={cn(
                     'grid size-8 shrink-0 place-items-center rounded-full border border-[var(--color-border)] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
-                    isOpen && 'rotate-45 border-[var(--color-accent)] text-[var(--color-accent-strong)]',
+                    isOpen &&
+                      'rotate-45 border-[var(--color-accent)] text-[var(--color-accent-strong)]',
                   )}
                 >
                   <Icon name="plus" size={16} />
@@ -67,7 +68,9 @@ export function Accordion({ items, multiple = false, className }: AccordionProps
               )}
             >
               <div className="overflow-hidden">
-                <p className="max-w-[60ch] pb-5 text-[var(--color-muted)]">{item.answer}</p>
+                <p className="max-w-[60ch] pb-5 text-[var(--color-muted)]">
+                  {item.answer}
+                </p>
               </div>
             </div>
           </div>

@@ -7,7 +7,13 @@ interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
 
-export function Container({ as: Tag = 'div', wide, className, children, ...props }: ContainerProps) {
+export function Container({
+  as: Tag = 'div',
+  wide,
+  className,
+  children,
+  ...props
+}: ContainerProps) {
   return (
     <Tag
       className={cn('container-page', wide && 'max-w-[var(--container-wide)]', className)}
@@ -40,7 +46,11 @@ export function Section({
 }: SectionProps) {
   return (
     <Tag
-      className={cn(size === 'sm' ? 'section-sm' : 'section', ink && 'surface-ink', className)}
+      className={cn(
+        size === 'sm' ? 'section-sm' : 'section',
+        ink && 'surface-ink',
+        className,
+      )}
       {...props}
     >
       <Container wide={wide} className={containerClassName}>

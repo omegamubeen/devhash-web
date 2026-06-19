@@ -8,18 +8,18 @@ import { company } from './company';
  * intent here. See docs/SEO_KEYWORD_MAP.md for the narrative version.
  */
 export const seo = {
-  siteName: 'DevHash',
+  siteName: 'durchX',
   /** Default social-card image (1200×630) served from /public. */
   defaultOgImage: '/og/og-default.png',
   /** Optional X/Twitter handle — left empty until a real account exists. */
   twitterHandle: '',
   titleTemplate: {
-    de: '%s | DevHash',
-    en: '%s | DevHash',
+    de: '%s | durchX',
+    en: '%s | durchX',
   } satisfies Localized,
   defaultTitle: {
-    de: 'DevHash – Webentwicklung, Software & IT‑Betreuung in Wien',
-    en: 'DevHash – Web development, software & IT care in Vienna',
+    de: 'durchX – Webentwicklung, Software & IT‑Betreuung in Wien',
+    en: 'durchX – Web development, software & IT care in Vienna',
   } satisfies Localized,
   defaultDescription: company.valueProposition,
 } as const;
@@ -47,7 +47,8 @@ export const staticKeywordMap: KeywordEntry[] = [
       de: 'IT‑Dienstleistungen Wien',
       en: 'IT services Vienna',
     },
-    intent: 'Catalogue / navigational: overview of all services to route visitors to the right one.',
+    intent:
+      'Catalogue / navigational: overview of all services to route visitors to the right one.',
   },
   {
     page: '/pricing',
@@ -55,7 +56,8 @@ export const staticKeywordMap: KeywordEntry[] = [
       de: 'Webentwicklung Kosten / Zusammenarbeit',
       en: 'software project pricing & engagement',
     },
-    intent: 'Commercial investigation: how engagements and pricing work before enquiring.',
+    intent:
+      'Commercial investigation: how engagements and pricing work before enquiring.',
   },
   {
     page: '/about',
@@ -63,7 +65,8 @@ export const staticKeywordMap: KeywordEntry[] = [
       de: 'Softwarestudio Wien',
       en: 'software studio Vienna',
     },
-    intent: 'Trust / brand: who we are and how we work, to support a decision to make contact.',
+    intent:
+      'Trust / brand: who we are and how we work, to support a decision to make contact.',
   },
   {
     page: '/contact',

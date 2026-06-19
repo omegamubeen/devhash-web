@@ -85,7 +85,10 @@ export const services: Service[] = [
     },
     includes: [
       {
-        title: { de: 'Konzept & Informationsarchitektur', en: 'Concept & information architecture' },
+        title: {
+          de: 'Konzept & Informationsarchitektur',
+          en: 'Concept & information architecture',
+        },
         description: {
           de: 'Wir strukturieren Inhalte und Nutzerführung, bevor eine Zeile Code entsteht.',
           en: 'We structure content and user flow before a line of code is written.',
@@ -157,25 +160,31 @@ export const services: Service[] = [
     },
     faqs: [
       {
-        question: { de: 'Arbeitet ihr mit WordPress oder individuell?', en: 'Do you use WordPress or build custom?' },
+        question: {
+          de: 'Arbeitet ihr mit WordPress oder individuell?',
+          en: 'Do you use WordPress or build custom?',
+        },
         answer: {
           de: 'Beides ist möglich. Wir wählen die Technik nach Ihrem Bedarf – ein wartbares CMS, wenn Sie viel selbst pflegen, oder eine individuelle Lösung, wenn Funktionen im Vordergrund stehen.',
           en: 'Both are possible. We choose the technology to fit your needs — a maintainable CMS when you edit a lot yourself, or a custom build when features come first.',
         },
       },
       {
-        question: { de: 'Kann ich Inhalte selbst ändern?', en: 'Can I change content myself?' },
+        question: {
+          de: 'Kann ich Inhalte selbst ändern?',
+          en: 'Can I change content myself?',
+        },
         answer: {
           de: 'Ja. Wir richten die Pflege so ein, dass typische Änderungen ohne Entwickler möglich sind, und erklären die Bedienung.',
           en: 'Yes. We set up editing so typical changes are possible without a developer, and we explain how it works.',
         },
       },
     ],
-    related: ['custom-software', 'maintenance', 'automation-integration'],
+    related: ['mobile-app-development', 'custom-software', 'maintenance'],
     seo: {
       title: {
-        de: 'Webentwicklung Wien – Websites & Web‑Apps | DevHash',
-        en: 'Web development in Vienna – websites & web apps | DevHash',
+        de: 'Webentwicklung Wien – Websites & Web‑Apps | durchX',
+        en: 'Web development in Vienna – websites & web apps | durchX',
       },
       description: {
         de: 'Professionelle Webentwicklung aus Wien: schnelle, barrierearme Websites und individuelle Web‑Applikationen mit sauberem technischem SEO.',
@@ -186,10 +195,162 @@ export const services: Service[] = [
     },
   },
   {
+    id: 'mobile-app-development',
+    slug: { de: 'mobile-app-entwicklung', en: 'mobile-app-development' },
+    icon: 'mobile',
+    order: 2,
+    title: { de: 'Mobile App‑Entwicklung', en: 'Mobile app development' },
+    tagline: {
+      de: 'Apps für iOS und Android – durchdacht, wartbar und nah am Nutzer.',
+      en: 'Apps for iOS and Android — considered, maintainable and close to users.',
+    },
+    summary: {
+      de: 'Mobile Anwendungen für iOS und Android, plattformübergreifend oder nativ – je nachdem, was Ihr Vorhaben wirklich braucht.',
+      en: 'Mobile applications for iOS and Android, cross-platform or native — whichever your project genuinely needs.',
+    },
+    intro: {
+      de: 'Eine gute App löst ein konkretes Problem und fühlt sich auf dem Gerät selbstverständlich an. Wir entwickeln mobile Anwendungen für iOS und Android und wählen den Weg – plattformübergreifend mit einer gemeinsamen Codebasis oder nativ – danach aus, was zu Funktionsumfang, Budget und Zeithorizont passt. So entsteht eine App, die sich gut bedienen lässt und langfristig wartbar bleibt.',
+      en: 'A good app solves a concrete problem and feels natural on the device. We build mobile applications for iOS and Android and choose the path — cross-platform with a shared codebase, or native — based on what fits the feature set, budget and timeline. The result is an app that is pleasant to use and stays maintainable over time.',
+    },
+    forWhom: {
+      de: [
+        'Unternehmen, die einen Service als App anbieten möchten',
+        'Teams mit einem internen Ablauf, der mobil besser funktioniert',
+        'Vorhaben, die iOS und Android mit überschaubarem Aufwand erreichen wollen',
+      ],
+      en: [
+        'Companies that want to offer a service as an app',
+        'Teams with an internal process that works better on mobile',
+        'Initiatives that want to reach iOS and Android with sensible effort',
+      ],
+    },
+    problems: {
+      de: [
+        'Die mobile Nutzung ist heute nur eine umständliche Website',
+        'Funktionen wie Offline‑Nutzung oder Push‑Nachrichten fehlen',
+        'Zwei getrennte Apps für iOS und Android wären zu teuer',
+        'Eine bestehende App ist veraltet und schwer zu pflegen',
+      ],
+      en: [
+        'Mobile use today is just an awkward website',
+        'Features like offline use or push notifications are missing',
+        'Two separate apps for iOS and Android would be too costly',
+        'An existing app is outdated and hard to maintain',
+      ],
+    },
+    includes: [
+      {
+        title: { de: 'Plattform‑Beratung', en: 'Platform advice' },
+        description: {
+          de: 'Wir klären ehrlich, ob plattformübergreifend oder nativ der bessere Weg ist.',
+          en: 'We clarify honestly whether cross-platform or native is the better path.',
+        },
+      },
+      {
+        title: { de: 'iOS & Android', en: 'iOS & Android' },
+        description: {
+          de: 'Eine durchdachte App für beide Plattformen statt doppelter Wege.',
+          en: 'One considered app for both platforms instead of duplicated effort.',
+        },
+      },
+      {
+        title: { de: 'Anbindung & Daten', en: 'Integration & data' },
+        description: {
+          de: 'Sichere Anbindung an Ihre Systeme, auf Wunsch mit Offline‑Betrieb und Synchronisation.',
+          en: 'Secure connection to your systems, optionally with offline use and sync.',
+        },
+      },
+      {
+        title: { de: 'Store‑Begleitung', en: 'Store support' },
+        description: {
+          de: 'Begleitung bis in App Store und Google Play – inklusive späterer Updates.',
+          en: 'Support all the way into the App Store and Google Play — later updates included.',
+        },
+      },
+    ],
+    process: [
+      {
+        title: { de: '1 · Verstehen', en: '1 · Understand' },
+        description: {
+          de: 'Ziel, Nutzer und Plattform klären und einen ersten Schnitt definieren.',
+          en: 'Clarify goal, users and platform and define a first slice.',
+        },
+      },
+      {
+        title: { de: '2 · Prototyp', en: '2 · Prototype' },
+        description: {
+          de: 'Früh ein bedienbarer Durchstich direkt auf dem Gerät.',
+          en: 'An operable slice on the device early on.',
+        },
+      },
+      {
+        title: { de: '3 · Entwickeln', en: '3 · Build' },
+        description: {
+          de: 'Funktionen iterativ, regelmäßig auf echten Geräten testbar.',
+          en: 'Features iteratively, regularly testable on real devices.',
+        },
+      },
+      {
+        title: { de: '4 · Veröffentlichen', en: '4 · Release' },
+        description: {
+          de: 'Store‑Einreichung, Übergabe und – auf Wunsch – laufende Updates.',
+          en: 'Store submission, handover and — if you want — ongoing updates.',
+        },
+      },
+    ],
+    outcomes: {
+      de: [
+        'Eine App, die sich auf iOS und Android gut anfühlt',
+        'Eine wartbare Codebasis statt zweier Insellösungen',
+        'Ein klarer Weg in die Stores und darüber hinaus',
+      ],
+      en: [
+        'An app that feels right on iOS and Android',
+        'A maintainable codebase instead of two silos',
+        'A clear path into the stores and beyond',
+      ],
+    },
+    faqs: [
+      {
+        question: {
+          de: 'Nativ oder plattformübergreifend?',
+          en: 'Native or cross-platform?',
+        },
+        answer: {
+          de: 'Beides hat seine Berechtigung. Für die meisten Vorhaben ist eine plattformübergreifende App wirtschaftlicher; wo maximale Performance oder spezielle Gerätefunktionen zählen, setzen wir nativ um. Wir entscheiden das gemeinsam anhand Ihrer Anforderungen.',
+          en: 'Both have their place. For most projects a cross-platform app is more economical; where maximum performance or special device features matter, we build native. We decide together based on your requirements.',
+        },
+      },
+      {
+        question: {
+          de: 'Übernehmt ihr die Veröffentlichung in den Stores?',
+          en: 'Do you handle publishing to the stores?',
+        },
+        answer: {
+          de: 'Ja. Wir begleiten die Einreichung in App Store und Google Play und kümmern uns auf Wunsch um Updates und Pflege.',
+          en: 'Yes. We support submission to the App Store and Google Play and, if you wish, take care of updates and maintenance.',
+        },
+      },
+    ],
+    related: ['web-development', 'custom-software', 'maintenance'],
+    seo: {
+      title: {
+        de: 'Mobile App‑Entwicklung Wien – iOS & Android | durchX',
+        en: 'Mobile app development in Vienna – iOS & Android | durchX',
+      },
+      description: {
+        de: 'Mobile App‑Entwicklung aus Wien: durchdachte Apps für iOS und Android, plattformübergreifend oder nativ – mit Anbindung an Ihre Systeme und Begleitung in die Stores.',
+        en: 'Mobile app development from Vienna: considered apps for iOS and Android, cross-platform or native — connected to your systems and supported into the stores.',
+      },
+      primaryKeyword: { de: 'App‑Entwicklung Wien', en: 'mobile app development Vienna' },
+      intent: 'Commercial — find a partner to build an iOS/Android app in Vienna.',
+    },
+  },
+  {
     id: 'custom-software',
     slug: { de: 'softwareentwicklung', en: 'custom-software' },
     icon: 'code',
-    order: 2,
+    order: 3,
     title: { de: 'Softwareentwicklung', en: 'Custom software' },
     tagline: {
       de: 'Individuelle Software für genau Ihren Ablauf – nicht von der Stange.',
@@ -303,7 +464,10 @@ export const services: Service[] = [
     },
     faqs: [
       {
-        question: { de: 'Wie stellt ihr sicher, dass das Budget hält?', en: 'How do you keep the budget under control?' },
+        question: {
+          de: 'Wie stellt ihr sicher, dass das Budget hält?',
+          en: 'How do you keep the budget under control?',
+        },
         answer: {
           de: 'Wir schneiden das Projekt in kleine, lieferbare Schritte. Nach jedem Schritt sehen Sie ein Ergebnis und entscheiden über den nächsten – das hält Risiko und Kosten überschaubar.',
           en: 'We slice the project into small, deliverable steps. After each step you see a result and decide on the next — keeping risk and cost manageable.',
@@ -320,14 +484,17 @@ export const services: Service[] = [
     related: ['web-development', 'automation-integration', 'maintenance'],
     seo: {
       title: {
-        de: 'Softwareentwicklung Wien – individuelle Software | DevHash',
-        en: 'Custom software development in Austria | DevHash',
+        de: 'Softwareentwicklung Wien – individuelle Software | durchX',
+        en: 'Custom software development in Austria | durchX',
       },
       description: {
         de: 'Individuelle Softwareentwicklung aus Wien: maßgeschneiderte Anwendungen, interne Tools und Portale – schrittweise geliefert und wartbar gebaut.',
         en: 'Custom software development from Vienna: tailored applications, internal tools and portals — delivered incrementally and built to maintain.',
       },
-      primaryKeyword: { de: 'Softwareentwicklung Wien', en: 'custom software development Austria' },
+      primaryKeyword: {
+        de: 'Softwareentwicklung Wien',
+        en: 'custom software development Austria',
+      },
       intent: 'Commercial — find a partner for individual/custom software in Austria.',
     },
   },
@@ -335,7 +502,7 @@ export const services: Service[] = [
     id: 'automation-integration',
     slug: { de: 'automatisierung-integration', en: 'automation-integration' },
     icon: 'flow',
-    order: 3,
+    order: 4,
     title: { de: 'Automatisierung & Integration', en: 'Automation & integration' },
     tagline: {
       de: 'Systeme verbinden, wiederkehrende Arbeit automatisieren.',
@@ -449,14 +616,20 @@ export const services: Service[] = [
     },
     faqs: [
       {
-        question: { de: 'Müssen wir unsere Tools wechseln?', en: 'Do we have to switch tools?' },
+        question: {
+          de: 'Müssen wir unsere Tools wechseln?',
+          en: 'Do we have to switch tools?',
+        },
         answer: {
           de: 'Meist nicht. Wir setzen auf den vorhandenen Schnittstellen auf. Einen Wechsel empfehlen wir nur, wenn er sich klar rechnet.',
           en: 'Usually not. We build on the interfaces you already have. We only suggest switching when it clearly pays off.',
         },
       },
       {
-        question: { de: 'Was passiert, wenn eine Automatisierung fehlschlägt?', en: 'What happens if an automation fails?' },
+        question: {
+          de: 'Was passiert, wenn eine Automatisierung fehlschlägt?',
+          en: 'What happens if an automation fails?',
+        },
         answer: {
           de: 'Jeder Ablauf wird protokolliert und benachrichtigt im Fehlerfall, sodass niemand stillschweigend auf falsche Daten vertraut.',
           en: 'Every flow is logged and notifies you on failure, so no one silently relies on incorrect data.',
@@ -466,14 +639,17 @@ export const services: Service[] = [
     related: ['custom-software', 'it-support', 'web-development'],
     seo: {
       title: {
-        de: 'Workflow‑Automatisierung & API‑Integration | DevHash',
-        en: 'Workflow automation & API integration | DevHash',
+        de: 'Workflow‑Automatisierung & API‑Integration | durchX',
+        en: 'Workflow automation & API integration | durchX',
       },
       description: {
         de: 'Workflow‑Automatisierung, API‑Integration und Systemintegration aus Wien: Systeme verbinden und wiederkehrende Arbeit zuverlässig automatisieren.',
         en: 'Workflow automation, API integration and systems integration from Vienna: connect systems and automate repetitive work reliably.',
       },
-      primaryKeyword: { de: 'Workflow‑Automatisierung', en: 'workflow automation & API integration' },
+      primaryKeyword: {
+        de: 'Workflow‑Automatisierung',
+        en: 'workflow automation & API integration',
+      },
       intent: 'Commercial — automate workflows / integrate systems and APIs.',
     },
   },
@@ -481,7 +657,7 @@ export const services: Service[] = [
     id: 'it-support',
     slug: { de: 'it-support', en: 'it-support' },
     icon: 'support',
-    order: 4,
+    order: 5,
     title: { de: 'IT‑Support & Betreuung', en: 'IT support & care' },
     tagline: {
       de: 'Ein verlässlicher Ansprechpartner für die IT Ihres Unternehmens.',
@@ -595,14 +771,20 @@ export const services: Service[] = [
     },
     faqs: [
       {
-        question: { de: 'Betreut ihr auch Systeme, die ihr nicht gebaut habt?', en: 'Do you support systems you did not build?' },
+        question: {
+          de: 'Betreut ihr auch Systeme, die ihr nicht gebaut habt?',
+          en: 'Do you support systems you did not build?',
+        },
         answer: {
           de: 'Ja. Wir beginnen mit einer Bestandsaufnahme, um Ihre Umgebung zu verstehen, und übernehmen die Betreuung darauf aufbauend.',
           en: 'Yes. We start with an inventory to understand your environment and take over care from there.',
         },
       },
       {
-        question: { de: 'Gibt es feste Reaktionszeiten?', en: 'Are there fixed response times?' },
+        question: {
+          de: 'Gibt es feste Reaktionszeiten?',
+          en: 'Are there fixed response times?',
+        },
         answer: {
           de: 'Reaktionszeiten vereinbaren wir individuell und halten sie schriftlich fest, damit beide Seiten wissen, woran sie sind.',
           en: 'We agree response times individually and record them in writing, so both sides know where they stand.',
@@ -612,14 +794,17 @@ export const services: Service[] = [
     related: ['maintenance', 'automation-integration', 'custom-software'],
     seo: {
       title: {
-        de: 'IT‑Support für Unternehmen in Wien – IT‑Betreuung für KMU | DevHash',
-        en: 'IT support for businesses in Vienna – SME IT care | DevHash',
+        de: 'IT‑Support für Unternehmen in Wien – IT‑Betreuung für KMU | durchX',
+        en: 'IT support for businesses in Vienna – SME IT care | durchX',
       },
       description: {
         de: 'IT‑Support und laufende IT‑Betreuung für KMU in Wien: fester Ansprechpartner, Updates, Sicherheit und dokumentierte Systeme.',
         en: 'IT support and ongoing IT care for SMEs in Vienna: a named contact, updates, security and documented systems.',
       },
-      primaryKeyword: { de: 'IT‑Support für Unternehmen Wien', en: 'IT support for businesses Vienna' },
+      primaryKeyword: {
+        de: 'IT‑Support für Unternehmen Wien',
+        en: 'IT support for businesses Vienna',
+      },
       intent: 'Commercial — find ongoing IT support/care for an SME in Vienna.',
     },
   },
@@ -627,7 +812,7 @@ export const services: Service[] = [
     id: 'maintenance',
     slug: { de: 'wartung-pflege', en: 'maintenance-care' },
     icon: 'shield',
-    order: 5,
+    order: 6,
     title: { de: 'Wartung & Pflege', en: 'Maintenance & care' },
     tagline: {
       de: 'Damit Website und Software dauerhaft sicher und aktuell bleiben.',
@@ -741,14 +926,20 @@ export const services: Service[] = [
     },
     faqs: [
       {
-        question: { de: 'Wartet ihr auch Projekte von anderen Anbietern?', en: 'Do you maintain projects built by others?' },
+        question: {
+          de: 'Wartet ihr auch Projekte von anderen Anbietern?',
+          en: 'Do you maintain projects built by others?',
+        },
         answer: {
           de: 'In der Regel ja. Wir starten mit einer Übernahme‑Analyse, um den Stand zu verstehen, und legen darauf aufbauend den Wartungsumfang fest.',
           en: 'Usually yes. We begin with a takeover review to understand the current state and define the maintenance scope from there.',
         },
       },
       {
-        question: { de: 'Wie wird Wartung abgerechnet?', en: 'How is maintenance billed?' },
+        question: {
+          de: 'Wie wird Wartung abgerechnet?',
+          en: 'How is maintenance billed?',
+        },
         answer: {
           de: 'Wartung läuft meist als laufende Betreuung mit vereinbartem Umfang. Den genauen Rahmen halten wir vor Beginn schriftlich fest.',
           en: 'Maintenance usually runs as ongoing care with an agreed scope. We put the exact terms in writing before we start.',
@@ -758,8 +949,8 @@ export const services: Service[] = [
     related: ['it-support', 'web-development', 'custom-software'],
     seo: {
       title: {
-        de: 'Website‑Wartung & Software‑Wartung Wien | DevHash',
-        en: 'Website & software maintenance, Vienna | DevHash',
+        de: 'Website‑Wartung & Software‑Wartung Wien | durchX',
+        en: 'Website & software maintenance, Vienna | durchX',
       },
       description: {
         de: 'Website‑Wartung und Software‑Wartung aus Wien: Updates, Sicherheits‑Patches, Monitoring, Backups und kleine Anpassungen mit festem Ansprechpartner.',

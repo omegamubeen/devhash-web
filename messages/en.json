@@ -1,8 +1,8 @@
 {
   "metadata": {
     "home": {
-      "title": "DevHash – Web development, software & IT care in Vienna",
-      "description": "DevHash plans, builds and maintains websites, custom software and IT for companies in Vienna and the DACH region – from the first idea to day-to-day operation."
+      "title": "durchX – Web development, software & IT care in Vienna",
+      "description": "durchX plans, builds and maintains websites, custom software and IT for companies in Vienna and the DACH region – from the first idea to day-to-day operation."
     },
     "services": {
       "title": "Services – web development, software, automation & IT",
@@ -13,8 +13,8 @@
       "description": "How we work together: fixed-scope project, ongoing care or dedicated development. Transparent models instead of bait pricing – a quote after we understand the scope."
     },
     "about": {
-      "title": "About DevHash – software & IT studio in Vienna",
-      "description": "DevHash is a technical software and IT studio in Vienna. We combine careful engineering with clear advice and long-term support."
+      "title": "About durchX – software & IT studio in Vienna",
+      "description": "durchX is a technical software and IT studio in Vienna. We combine careful engineering with clear advice and long-term support."
     },
     "contact": {
       "title": "Contact – start a project",
@@ -65,7 +65,7 @@
     "switchToGerman": "Auf Deutsch wechseln",
     "languageLabel": "Language",
     "breadcrumb": "Breadcrumb",
-    "homeLink": "DevHash – home",
+    "homeLink": "durchX – home",
     "currentPage": "Current page"
   },
   "header": {
@@ -194,7 +194,7 @@
   "about": {
     "eyebrow": "About us",
     "heading": "A software and IT studio that thinks long term",
-    "intro": "DevHash combines development, advice and care. We don’t just build what’s wanted today, but what still holds up tomorrow.",
+    "intro": "durchX combines development, advice and care. We don’t just build what’s wanted today, but what still holds up tomorrow.",
     "storyHeading": "What we’re about",
     "story1": "Many technical projects fail not on the technology, but on unclear expectations, missing upkeep and solutions no one understands anymore. That’s exactly where we focus.",
     "story2": "We work in transparent steps, document what we do, and stay reachable once a project is live. The result is technology that holds up in everyday use – not just in the demo.",
@@ -241,6 +241,7 @@
       "topic": "What’s it about?",
       "topicOptions": {
         "web": "Website / web development",
+        "mobile": "Mobile app (iOS & Android)",
         "software": "Custom software",
         "automation": "Automation / integration",
         "support": "IT support / care",

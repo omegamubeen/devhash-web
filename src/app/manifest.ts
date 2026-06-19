@@ -3,7 +3,7 @@ import { seo } from '@/config/seo';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'DevHash — Web, Software & IT',
+    name: 'durchX — Web, Software & IT',
     short_name: seo.siteName,
     description: seo.defaultDescription.en,
     start_url: '/',

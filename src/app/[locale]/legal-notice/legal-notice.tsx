@@ -19,7 +19,8 @@ export async function LegalNotice({ locale }: { locale: Locale }) {
     <div className="prose-legal">
       <h2>{t('legalNotice.companyHeading')}</h2>
       <Row>
-        <strong>{company.brand.value}</strong> — <FactText fact={company.legalName} fallback={pending} />
+        <strong>{company.brand.value}</strong> —{' '}
+        <FactText fact={company.legalName} fallback={pending} />
       </Row>
       <Row>
         <FactText fact={legal.legalForm} locale={locale} fallback={pending} />
@@ -41,7 +42,8 @@ export async function LegalNotice({ locale }: { locale: Locale }) {
 
       <h2>{t('legalNotice.registrationHeading')}</h2>
       <Row>
-        Firmenbuchnummer: <FactText fact={legal.companyRegisterNumber} fallback={pending} />
+        Firmenbuchnummer:{' '}
+        <FactText fact={legal.companyRegisterNumber} fallback={pending} />
       </Row>
       <Row>
         Firmenbuchgericht: <FactText fact={legal.registerCourt} fallback={pending} />
@@ -51,7 +53,11 @@ export async function LegalNotice({ locale }: { locale: Locale }) {
       </Row>
       <Row>
         {legal.tradeRegulations.value[locale]} —{' '}
-        <a href={legal.tradeRegulations.value.url} rel="noopener noreferrer" target="_blank">
+        <a
+          href={legal.tradeRegulations.value.url}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           {legal.tradeRegulations.value.url}
         </a>
       </Row>
