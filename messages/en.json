@@ -84,7 +84,9 @@
     "hero": {
       "eyebrow": "Software & IT studio in Vienna",
       "headline": "Digital products that stay reliable in everyday use.",
-      "subhead": "We plan, build and maintain websites, custom software and automation for companies in Vienna and the DACH region – with clean code and clear communication.",
+      "build": "We build",
+      "rotating": ["websites", "mobile apps", "software", "automation"],
+      "subhead": "And we keep them running reliably — with clean code and clear communication, from Vienna for the DACH region.",
       "primaryCta": "Start a project",
       "secondaryCta": "View services",
       "note": "First conversation with no obligation. A quote only after the scope is clear."

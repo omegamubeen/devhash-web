@@ -13,6 +13,7 @@ import { Reveal } from '@/components/primitives/reveal';
 import { LinkButton } from '@/components/primitives/button';
 import { CtaBand } from '@/components/sections/cta-band';
 import { HomeHeroShowcase } from '@/components/sections/home-showcase';
+import { RotatingWords } from '@/components/sections/rotating-words';
 import { Icon } from '@/components/icons/icon-set';
 import { cn } from '@/lib/cn';
 
@@ -74,10 +75,14 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
           <div className="flex flex-col items-start gap-6 lg:pb-10">
             <span className="eyebrow animate-rise">{t('hero.eyebrow')}</span>
             <h1
-              className="max-w-[15ch] animate-rise text-5xl font-semibold tracking-[-0.025em] text-[var(--color-carbon)]"
+              className="max-w-[16ch] animate-rise text-[clamp(2.2rem,1.1rem+4.1vw,4.5rem)] font-semibold tracking-[-0.025em] text-[var(--color-carbon)]"
               style={{ animationDelay: '60ms' }}
             >
-              {t('hero.headline')}
+              {t('hero.build')}{' '}
+              <RotatingWords
+                words={t.raw('hero.rotating') as string[]}
+                className="text-[var(--color-accent-strong)]"
+              />
             </h1>
             <p
               className="max-w-[52ch] animate-rise text-lg text-[var(--color-muted)]"
@@ -193,7 +198,7 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
                   className={cn(
                     'font-mono text-xs',
                     i === 1 || i === 3
-                      ? 'text-white/70'
+                      ? 'text-white/90'
                       : 'text-[var(--color-slate-400)]',
                   )}
                 >
@@ -212,7 +217,7 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
                 <span
                   className={cn(
                     'text-sm',
-                    i === 1 || i === 3 ? 'text-white/75' : 'text-[var(--color-muted)]',
+                    i === 1 || i === 3 ? 'text-white/90' : 'text-[var(--color-muted)]',
                   )}
                 >
                   {service.summary[locale]}

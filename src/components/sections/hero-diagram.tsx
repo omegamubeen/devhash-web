@@ -222,7 +222,11 @@ export function HeroDiagram({ labels }: HeroDiagramProps) {
         </g>
         <rect x="264" y="78" width="72" height="206" rx="15" fill="rgba(7,12,20,0.54)" />
         {tasks.map((task, index) => (
-          <g key={`${task.y}-${index}`} className="dh-flow-task" style={{ animationDelay: task.delay }}>
+          <g
+            key={`${task.y}-${index}`}
+            className="dh-flow-task"
+            style={{ animationDelay: task.delay }}
+          >
             <rect
               x={task.x}
               y={task.y}
@@ -288,7 +292,14 @@ export function HeroDiagram({ labels }: HeroDiagramProps) {
           stroke="rgba(255,255,255,0.12)"
         />
         <rect x="436" y="88" width="42" height="8" rx="4" fill="rgba(255,255,255,0.54)" />
-        <rect x="436" y="106" width="64" height="5" rx="2.5" fill="rgba(255,255,255,0.18)" />
+        <rect
+          x="436"
+          y="106"
+          width="64"
+          height="5"
+          rx="2.5"
+          fill="rgba(255,255,255,0.18)"
+        />
         {outputs.map((output, index) => (
           <g key={output.y}>
             <circle

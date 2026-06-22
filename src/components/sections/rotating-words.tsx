@@ -40,7 +40,7 @@ export function RotatingWords({
             className={cn(
               'col-start-1 row-start-1 whitespace-nowrap transition-[opacity,transform] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]',
               i === index
-                ? 'opacity-100 translate-y-0'
+                ? 'translate-y-0 opacity-100'
                 : 'pointer-events-none translate-y-[0.3em] opacity-0',
             )}
           >
