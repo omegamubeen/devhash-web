@@ -1,6 +1,6 @@
 {
   "name": "durchx-website",
-  "version": "1.0.0",
+  "version": "0.2.6",
   "private": true,
   "description": "Bilingual (de-AT / en) marketing website for durchX — Vienna-based IT studio. Placeholder brand pending confirmation.",
   "type": "module",
